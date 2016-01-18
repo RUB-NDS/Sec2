@@ -80,9 +80,7 @@
     <module>sec2-pipeline</module>
     <module>sec2-saml-client</module>
     <module>sec2-card</module>
-    <!--<module>sec2-rest</module>--> <!-- Whatever this is, it prevents compilation -->
     <module>sec2-mwserver-core</module>
-    <module>sec2-shaded-test</module>
   </modules>
 
   <reporting>
