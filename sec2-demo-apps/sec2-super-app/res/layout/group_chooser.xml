@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_page_tiles">
+    
+     <TextView
+            android:id="@+id/group_chooser_intro"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/group_chooser_intro"
+            android:layout_marginBottom="10dp"/>
+
+    <ListView
+        android:id="@+id/group_chooser_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/group_chooser_intro">
+    </ListView>
+    
+    <Button
+        style="@style/button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/group_chooser_list"
+        android:layout_marginTop="10dp"
+        android:text="@string/button_save"
+        android:onClick="saveNotice"/>
+</RelativeLayout>

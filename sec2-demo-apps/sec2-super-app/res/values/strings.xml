@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Sec²</string>
+    <string name="content_description">Bildbeschreibung</string>
+
+    <!-- AlertHelper.java -->
+    <string name="error">Fehler</string>
+    <string name="adjustments">Einstellungen</string>
+    <string name="wireless_title">Sie benötigen eine Netzverbindung!</string>
+    <string name="wireless_message">Überprüfen Sie Ihre Mobilfunk- oder WLAN-Einstellungen.</string>
+    <string name="location_title">Keine Ortung möglich</string>
+    <string name="location_message">Aktivieren Sie Wireless oder GPS unter den Einstellungen. Oder benutzen Sie die manuelle Suche.</string>
+
+    <!-- WaitingDialog -->
+    <string name="waiting">Bitte warten&#8230;</string>
+
+    <!-- ExplorerActivity -->
+    <string name="document_open">Öffnen</string>
+    <string name="document_delete">Löschen</string>
+    <string name="document_encode">Upload</string>
+    <string name="document_decode">Download</string>
+    <string name="explorer_open_file">Es befindet sich auf Ihrem Gerät keine Applikation die die Datei %1$s öffnen kann.</string>
+    <string name="explorer_create_title">Dateimanager</string>
+    <string name="explorer_create_save_success">%1$s erfolgreich gespeichert.</string>
+    <string name="explorer_create_delete_success">%1$s erfolgreich gelöscht.</string>
+    <string name="explorer_create_false_filesize">Die Datei %1$s überschreitet die zulässige Dateigröße.</string>
+    <string name="explorer_create_false_key">FEHLER: Datei konnte nicht gespeichert werden. Bitte registrieren sie zunächst die App bei der Middleware!</string>
+    <string name="explorer_create_false_error">FEHLER: Datei konnte nicht gespeichert werden. </string>
+    <string name="explorer_create_false_db">FEHLER: Datei konnte nicht gespeichert werden (DB-Fehler).</string>
+    <string name="explorer_override_file">Es existiert bereits eine Datei mit der Bezeichnung %1$s in der Cloud. Möchten Sie die Datei ersetzen?</string>
+    <string name="explorer_override_file_download">Es existiert bereits eine Datei mit der Bezeichnung %1$s in Ihrem Download Ordner. Möchten Sie die Datei ersetzen?</string>
+    <string name="explorer_encrypt_file">Soll die Datei %1$s verschlüsselt werden?</string>
+
+    <!-- EventActivity -->
+    <string name="event_subject_hint">Betreff eines Ergebnisses</string>
+    <string name="event_date_from">Von</string>
+    <string name="event_date_to">Bis</string>
+    <string name="event_date_image_description">Kalender</string>
+    <string name="event_checkbox_whole_day">Ganzen Tag</string>
+    <string name="event_location">Ort</string>
+    <string name="event_attendees">Teilnehmer</string>
+    <string name="event_repeat">Wiederholen</string>
+    <string name="event_reminder">Erinnerungen</string>
+    <string name="event_description">Beschreibungstext</string>
+    <string name="event_button_upload">hochladen</string>
+    <string name="event_create_success_title">Ereignis speichern</string>
+    <string name="event_create_success_true">Ereignis erfolgreich gespeichert.</string>
+    <string name="event_create_success_false_key">FEHLER: Ereignis konnte nicht gespeichert werden. Bitte registrieren sie zunächst die App bei der Middleware!</string>
+    <string name="event_create_success_false_error">FEHLER: Ereignis konnte nicht gespeichert werden. </string>
+    <string name="event_create_success_false_db">FEHLER: Ereignis konnte nicht gespeichert werden (DB-Fehler).</string>
+    <string name="event_username_not_found">[Kein Name gefunden]</string>
+    <string name="event_attendees_selected">%s Teilnehmer</string>
+
+    <!-- LoginActivity -->
+    <string name="login_pin">PIN</string>
+    <string name="login_btn">Anmelden</string>
+    <string name="login_pw_validation_error_title">Paßwortvalidierung</string>
+    <string name="login_pw_validation_error">Während der Paßwortvalidierung ist ein Fehler aufgetreten: {0}</string>
+    <string name="login_pw_wrong_error">Das eingegebene Paßwort ist nicht korrekt</string>
+
+    <!-- MainActivity -->
+
+
+    <!-- NoticeCreateActivity -->
+    <string name="label_header">Betreff</string>
+    <string name="header_text"></string>
+    <string name="label_edittext">Notiztext</string>
+    <string name="edittext_text"></string>
+    <string name="label_textview">Preview - Notiztext</string>
+    <string name="button_save">Speichern</string>
+    <string name="button_delete">Löschen</string>
+    <string name="button_encrypt_some">Verschlüsseln</string>
+    <string name="button_decrypt_some">Entschlüsseln</string>
+    <string name="button_encrypt_all">Alles verschlüsseln</string>
+    <string name="button_decrypt_all">Alles entschlüsseln</string>
+    <string name="button_delete_all">Alles löschen</string>
+    <string name="button_delete_marking">Markierungen löschen</string>
+    <string name="content"></string>
+    <string name="notice_create_success_title">Notiz speichern</string>
+    <string name="notice_create_success_true">Notiz erfolgreich gespeichert.</string>
+    <string name="notice_create_success_false_key">FEHLER: Notiz konnte nicht gespeichert werden. Bitte registrieren sie zunächst die App bei der Middleware!</string>
+    <string name="notice_create_success_false_error">FEHLER: Notiz konnte nicht gespeichert werden. </string>
+    <string name="notice_create_success_false_db">FEHLER: Notiz konnte nicht gespeichert werden (DB-Fehler).</string>
+
+    <!-- TaskCreateActivity -->
+    <string name="task_priority_label">Priorität</string>
+    <string name="task_inputarea_label">Aufgabentext</string>
+    <string name="task_state_label">Status</string>
+    <string name="task_due_label">Fällig am</string>
+    <string name="task_reminder_label">Erinnerung am</string>
+    <string name="task_create_success_title">Aufgabe speichern</string>
+    <string name="task_create_success_true">Aufgabe erfolgreich gespeichert.</string>
+    <string name="task_create_success_false_key">FEHLER: Aufgabe konnte nicht gespeichert werden. Bitte registrieren sie zunächst die App bei der Middleware!</string>
+    <string name="task_create_success_false_error">FEHLER: Aufgabe konnte nicht gespeichert werden. </string>
+    <string name="task_create_success_false_db">FEHLER: Aufgabe konnte nicht gespeichert werden (DB-Fehler).</string>
+
+    <!-- TaskListActivity -->
+    <string name="priority">Priorität</string>
+    <string name="state">Status</string>
+    <string name="task_delete_success_title">Aufgabe löschen</string>
+    <string name="task_delete_success_true">Aufgabe erfolgreich gelöscht.</string>
+    <string name="task_delete_success_false_db">FEHLER: Aufgabe konnte nicht gelöscht werden (DB-Fehler).</string>
+    <string name="task_delete_success_false_error">FEHLER: Aufgabe konnte nicht gelöscht werden. </string>
+    <string name="task_delete_success_false_key">FEHLER: Aufgabe konnte nicht gelöscht werden. Bitte registrieren sie zunächst die App bei der Middleware!</string>
+
+    <!-- NoticeListActivity -->
+    <string name="date">Datum</string>
+    <string name="subject">Betreff</string>
+    <string name="cmi_delete">Löschen</string>
+    <string name="cmi_open">Öffnen</string>
+    <string name="notice_delete_success_title">Notiz löschen</string>
+    <string name="notice_delete_success_true">Notiz erfolgreich gelöscht.</string>
+    <string name="notice_delete_success_false_db">FEHLER: Notiz konnte nicht gelöscht werden (DB-Fehler).</string>
+    <string name="notice_delete_success_false_error">FEHLER: Notiz konnte nicht gelöscht werden. </string>
+    <string name="notice_delete_success_false_key">FEHLER: Notiz konnte nicht gelöscht werden. Bitte registrieren sie zunächst die App bei der Middleware!</string>
+
+    <!-- GroupChooserActivity -->
+    <string name="group_chooser_intro">Bitte wählen Sie die Gruppen aus, für die verschlüsselt werden soll:</string>
+    <string name="group_chooser_success_title">Gruppenauswahl</string>
+    <string name="group_chooser_success_true">Notiz erfolgreich gespeichert</string>
+    <string name="group_chooser_success_false_key">FEHLER: Gruppeninformationen konnten nicht abgerufen werden. Bitte registrieren sie zunächst die App bei der Middleware!</string>
+    <string name="group_chooser_success_false_error">FEHLER: Gruppeninformationen konnten nicht abgerufen werden. </string>
+    <string name="group_chooser_success_false_db">FEHLER: Notiz konnte nicht gespeichert werden (DB-Fehler).</string>
+    <string name="group_chooser_success_false_dom">FEHLER: Kein Ersteller für XML-DOkument gefunden.</string>
+    <string name="ok">OK</string>
+
+    <!-- Sec2PreferenceActivity -->
+    <string name="pref_cat_login">Sicherheit</string>
+    <string name="pref_login_title">Paßwort</string>
+    <string name="pref_login_summary">Loginpaßwort der App</string>
+    <string name="pref_login_dialog">Neues Loginpaßwort</string>
+    <string name="pref_login_hint">Neues Paßwort</string>
+    <string name="pref_login_empty_error">Paßwort darf nicht leer sein!</string>
+    <string name="pref_login_store_error">Das Paßwort wurde nicht geändert, da das neue Paßwort nicht gespeichert werden konnte!</string>
+
+    <!-- Service.java -->
+    <string name="service_delete">Lösche %1$s&#8230;</string>
+    <string name="service_get_events">Lade Ereignisse&#8230;</string>
+    <string name="service_get_event">Lade Ereignis %1$d / %2$d</string>
+    <string name="service_get_file">Lade %1$s&#8230;</string>
+    <string name="service_get_group">Lade Gruppeninformationen&#8230;</string>
+    <string name="service_get_notices">Lade Notizen&#8230;</string>
+    <string name="service_get_notice">Lade Notiz %1$d / %2$d</string>
+    <string name="service_get_tasks">Lade Aufgaben&#8230;</string>
+    <string name="service_get_task">Lade Aufgabe %1$d / %2$d</string>
+    <string name="service_save">Speichere %1$s&#8230;</string>
+    <string name="service_key_null">Key must not be NULL!</string>
+    <string name="service_algorithm_null">Algorithm must not be NULL!</string>
+    <string name="service_notice">Notiz</string>
+    <string name="service_event">Ereignis</string>
+    <string name="service_file">Datei</string>
+    <string name="service_task">Aufgabe</string>
+
+    <!-- CalendarActivity -->
+    <string name="dialog_headline">Ereignisse am %1$s:</string>
+    <string name="event_delete_success_title">Ereignis löschen</string>
+    <string name="event_delete_success_true">Ereignis erfolgreich gelöscht.</string>
+    <string name="event_delete_success_false_db">FEHLER: Ereignis konnte nicht gelöscht werden (DB-Fehler).</string>
+    <string name="event_delete_success_false_error">FEHLER: Ereignis konnte nicht gelöscht werden. </string>
+    <string name="event_delete_success_false_key">FEHLER: Ereignis konnte nicht gelöscht werden. Bitte registrieren sie zunächst die App bei der Middleware!</string>
+
+</resources>

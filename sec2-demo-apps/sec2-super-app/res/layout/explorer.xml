@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_page_tiles" >
+
+    <TextView
+        android:id="@+id/explorer_path"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:paddingBottom="5dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="5dip"
+        android:singleLine="true"
+        android:textSize="16sp" />
+
+    <GridView
+        android:id="@+id/explorer_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/explorer_path"
+        android:horizontalSpacing="5dip"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="4"
+        android:padding="0dip"
+        android:scrollbarStyle="outsideOverlay"
+        android:verticalSpacing="0dip" />
+    <!-- android:background="#fcfcfc" -->
+
+</RelativeLayout>

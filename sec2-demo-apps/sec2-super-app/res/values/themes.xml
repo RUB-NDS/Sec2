@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Sec2Theme" parent="android:Theme.Light">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:editTextStyle">@style/Widget.EditText</item>
+        <item name="android:checkboxStyle">@style/Widget.CompoundButton.CheckBox</item>
+        <!-- <item name="android:windowContentOverlay">@null</item> -->
+        <item name="android:gridViewStyle">@style/Widget.GridView</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowTitleSize">44dip</item>
+        <item name="android:windowTitleBackgroundStyle">@null</item>
+    </style>
+
+    <!-- WAITING DIALOG -->
+    <style name="WaitingDialogTheme" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@drawable/panel_background_holo</item>
+    </style>
+
+    <style name="Sec2AdapterTheme" parent="android:Theme.Light" />
+
+</resources>

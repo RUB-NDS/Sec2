@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="priority_entries">
+        <item>Hoch</item>
+        <item>Mittel</item>
+        <item>Niedrig</item>
+    </array>
+    <array name="priority_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </array>
+    <array name="event_repeat_values">
+        <item>Ohne</item>
+        <item>Täglich</item>
+        <item>Wöchentlich</item>
+        <item>Alle 2 Wochen</item>
+        <item>Monatlich</item>
+        <item>Jährlich</item>
+    </array>
+    <array name="event_reminder_values">
+        <item>5 Minuten vorher</item>
+        <item>15 Minuten vorher</item>
+        <item>1 Stunde vorher</item>
+        <item>1 Tag vorher</item>
+        <item>2 Tage vorher</item>
+        <item>1 Woche vorher</item>
+    </array>
+
+</resources>

@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_page_tiles"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:id="@+id/rl_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/event_subject_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_header" />
+
+        <EditText
+            android:id="@+id/event_subject"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/event_subject_header"
+            android:hint="@string/event_subject_hint"
+            android:inputType="text" />
+
+        <TableLayout
+            android:id="@+id/tl_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/event_subject"
+            android:shrinkColumns="1"
+            android:stretchColumns="1" >
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/event_date_from" />
+
+                <EditText
+                    android:id="@+id/event_from_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:inputType="datetime"
+                    android:lines="1"
+                    android:onClick="onClick" />
+
+                <ImageButton
+                    android:id="@+id/event_button_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-5dp"
+                    android:background="@null"
+                    android:contentDescription="@string/event_date_image_description"
+                    android:onClick="onClick"
+                    android:src="@drawable/icon_calendar" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/event_date_to" />
+
+                <EditText
+                    android:id="@+id/event_to_et"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:inputType="datetime"
+                    android:lines="1"
+                    android:onClick="onClick" />
+
+                <ImageButton
+                    android:id="@+id/event_button_to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-5dp"
+                    android:background="@null"
+                    android:contentDescription="@string/event_date_image_description"
+                    android:onClick="onClick"
+                    android:src="@drawable/icon_calendar" />
+            </TableRow>
+
+            <TableRow android:gravity="center_vertical" >
+
+                <CheckBox
+                    android:id="@+id/even_cb_whole_day"
+                    style="@drawable/btn_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginTop="-4dp"
+                    android:layout_span="2"
+                    android:minHeight="40dp"
+                    android:onClick="onClick"
+                    android:text="@string/event_checkbox_whole_day" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/event_location" />
+
+                <EditText
+                    android:id="@+id/event_location_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:inputType="textCapSentences"
+                    android:lines="1"
+                    android:onClick="onClick" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/event_attendees" />
+
+                <Button
+                    android:id="@+id/event_attendees_btn"
+                    style="@android:style/Widget.Spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:background="@drawable/btn_dropdown_default"
+                    android:gravity="left|center_vertical"
+                    android:lines="1"
+                    android:onClick="onClick" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/event_repeat" />
+
+                <Spinner
+                    android:id="@+id/event_repeat_sp"
+                    style="@style/spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:entries="@array/event_repeat_values" />
+
+                <!-- <EditText -->
+                <!-- android:id="@+id/event_repeat_et" -->
+                <!-- android:layout_width="wrap_content" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_span="2" -->
+                <!-- android:clickable="false" -->
+                <!-- android:focusable="false" -->
+                <!-- android:inputType="textCapSentences" -->
+                <!-- android:lines="1" -->
+                <!-- android:onClick="onClick" /> -->
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/event_reminder" />
+
+                <Spinner
+                    android:id="@+id/event_reminder_sp"
+                    style="@style/spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:entries="@array/event_reminder_values" >
+                </Spinner>
+
+                <!-- <EditText -->
+                <!-- android:id="@+id/event_notification_et" -->
+                <!-- android:layout_width="wrap_content" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_span="2" -->
+                <!-- android:clickable="false" -->
+                <!-- android:focusable="false" -->
+                <!-- android:inputType="textCapSentences" -->
+                <!-- android:lines="1" -->
+                <!-- android:onClick="onClick" /> -->
+            </TableRow>
+        </TableLayout>
+
+        <ToggleButton
+            android:id="@+id/event_lock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tl_id"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/btn_toggle"
+            android:checked="false"
+            android:textOff=""
+            android:textOn="" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/event_lock"
+            android:layout_below="@id/tl_id"
+            android:layout_marginRight="10dp"
+            android:gravity="bottom"
+            android:text="@string/event_description" />
+
+        <EditText
+            android:id="@+id/event_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/event_lock"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="top|left"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="textMultiLine"
+            android:lines="10"
+            android:scrollbars="vertical" />
+
+        <Button
+            android:id="@+id/event_button_upload"
+            style="@style/button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/event_et"
+            android:layout_marginTop="10dp"
+            android:onClick="onClick"
+            android:text="@string/event_button_upload" />
+    </RelativeLayout>
+
+    <!-- <RelativeLayout -->
+    <!-- android:id="@+id/rl_id" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:padding="10dp" > -->
+
+
+    <!-- <TextView -->
+    <!-- android:id="@+id/event_subject_header" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:text="@string/label_header" /> -->
+
+
+    <!-- <EditText -->
+    <!-- android:id="@+id/event_subject" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_below="@+id/event_subject_header" -->
+    <!-- android:hint="@string/event_subject_hint" -->
+    <!-- android:inputType="text" /> -->
+
+
+    <!-- <LinearLayout -->
+    <!-- android:id="@+id/event_from" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_below="@id/event_subject" -->
+    <!-- android:gravity="center_vertical" -->
+    <!-- android:orientation="horizontal" > -->
+
+
+    <!-- <TextView -->
+    <!-- android:layout_width="0dp" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_marginRight="10dp" -->
+    <!-- android:layout_weight="0.2" -->
+    <!-- android:text="@string/event_date_from" /> -->
+
+
+    <!-- <EditText -->
+    <!-- android:id="@+id/event_from_et" -->
+    <!-- android:layout_width="0dp" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_marginRight="10dp" -->
+    <!-- android:layout_weight="0.5" -->
+    <!-- android:clickable="false" -->
+    <!-- android:focusable="false" -->
+    <!-- android:inputType="datetime" -->
+    <!-- android:lines="1" -->
+    <!-- android:onClick="onClick" /> -->
+
+
+    <!-- <ImageButton -->
+    <!-- android:id="@+id/event_button_from" -->
+    <!-- android:layout_width="0dp" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_weight="0.1" -->
+    <!-- android:background="@null" -->
+    <!-- android:contentDescription="@string/event_date_image_description" -->
+    <!-- android:onClick="onClick" -->
+    <!-- android:src="@drawable/icon_calendar" /> -->
+    <!-- </LinearLayout> -->
+
+
+    <!-- <LinearLayout -->
+    <!-- android:id="@+id/event_to" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_below="@id/event_from" -->
+    <!-- android:gravity="center_vertical" -->
+    <!-- android:orientation="horizontal" > -->
+
+
+    <!-- <TextView -->
+    <!-- android:layout_width="0dp" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_marginRight="10dp" -->
+    <!-- android:layout_weight="0.2" -->
+    <!-- android:text="@string/event_date_to" /> -->
+
+
+    <!-- <EditText -->
+    <!-- android:id="@+id/event_to_et" -->
+    <!-- android:layout_width="0dp" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_marginRight="10dp" -->
+    <!-- android:layout_weight="0.5" -->
+    <!-- android:clickable="false" -->
+    <!-- android:focusable="false" -->
+    <!-- android:inputType="datetime" -->
+    <!-- android:lines="1" -->
+    <!-- android:onClick="onClick" /> -->
+
+
+    <!-- <ImageButton -->
+    <!-- android:id="@+id/event_button_to" -->
+    <!-- android:layout_width="0dp" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_weight="0.1" -->
+    <!-- android:background="@null" -->
+    <!-- android:contentDescription="@string/event_date_image_description" -->
+    <!-- android:onClick="onClick" -->
+    <!-- android:src="@drawable/icon_calendar" /> -->
+    <!-- </LinearLayout> -->
+
+
+    <!-- <LinearLayout -->
+    <!-- android:id="@+id/event_whole_day" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_below="@+id/event_to" -->
+    <!-- android:gravity="center_vertical" -->
+    <!-- android:orientation="horizontal" > -->
+
+
+    <!-- <View -->
+    <!-- android:layout_width="0dp" -->
+    <!-- android:layout_height="0dp" -->
+    <!-- android:layout_marginRight="10dp" -->
+    <!-- android:layout_weight="0.2" /> -->
+
+
+    <!-- <CheckBox -->
+    <!-- android:id="@+id/even_cb_whole_day" -->
+    <!-- style="@drawable/btn_check" -->
+    <!-- android:layout_width="0dp" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_marginRight="10dp" -->
+    <!-- android:layout_weight="0.5" -->
+    <!-- android:onClick="onClick" -->
+    <!-- android:text="@string/event_checkbox_whole_day" /> -->
+
+
+    <!-- <View -->
+    <!-- android:layout_width="0dp" -->
+    <!-- android:layout_height="0dp" -->
+    <!-- android:layout_weight="0.1" /> -->
+    <!-- </LinearLayout> -->
+
+
+    <!-- <LinearLayout -->
+    <!-- android:id="@+id/event_location" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_below="@id/event_whole_day" -->
+    <!-- android:gravity="center_vertical" -->
+    <!-- android:orientation="horizontal" > -->
+
+
+    <!-- <TextView -->
+    <!-- android:layout_width="50dp" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_marginRight="10dp" -->
+    <!-- android:layout_weight="0.2" -->
+    <!-- android:text="@string/event_location" /> -->
+
+
+    <!-- <EditText -->
+    <!-- android:id="@+id/event_location_et" -->
+    <!-- android:layout_width="0dp" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_weight="0.5" -->
+    <!-- android:inputType="textCapSentences" -->
+    <!-- android:lines="1" -->
+    <!-- android:onClick="onClick" /> -->
+    <!-- </LinearLayout> -->
+
+
+    <!-- <Button -->
+    <!-- android:id="@+id/event_button_upload" -->
+    <!-- style="@style/button" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_below="@id/event_location" -->
+    <!-- android:layout_marginTop="10dp" -->
+    <!-- android:onClick="onClick" -->
+    <!-- android:text="@string/event_button_upload" /> -->
+    <!-- </RelativeLayout> -->
+
+</ScrollView>

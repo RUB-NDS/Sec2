@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.GridView" parent="@android:Widget.GridView">
+        <item name="android:listSelector">@drawable/selector_background</item>
+    </style>
+
+    <style name="button">
+        <item name="android:background">@drawable/btn_default</item>
+    </style>
+ 
+    <style name="spinner">
+        <item name="android:background">@drawable/btn_dropdown_default</item>
+    </style>
+   
+    <style name="Widget.CompoundButton.CheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/btn_check</item>
+    </style>
+    
+    <style name="Widget.EditText" parent="@android:style/Widget.EditText">
+        <item name="android:background">@drawable/edit_text</item>
+    </style>
+
+    <style name="text_red">
+        <item name="android:textColor">#FFFF0000</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="text_blue">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#FF00FF00</item>
+    </style>
+
+    <style name="text_black">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#FF000000</item>
+    </style>
+
+        <style name="Theme.Holo.Dialog.Alert" parent="@android:style/Theme.Holo.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@android:dimen/dialog_min_width_major</item>
+    </style>
+    
+</resources>
