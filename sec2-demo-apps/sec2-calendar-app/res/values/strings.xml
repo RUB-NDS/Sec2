@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Sec²</string>
+
+    <!-- AlertHelper.java -->
+    <string name="error">Fehler</string>
+    <string name="adjustments">Einstellungen</string>
+    <string name="wireless_title">Sie benötigen eine Netzverbindung!</string>
+    <string name="wireless_message">Überprüfen Sie Ihre Mobilfunk- oder WLAN-Einstellungen.</string>
+    <string name="location_title">Keine Ortung möglich</string>
+    <string name="location_message">Aktivieren Sie Wireless oder GPS unter den Einstellungen. Oder benutzen Sie die manuelle Suche.</string>
+
+    <!-- FileChoose.java -->
+    <string name="document_select">Verwenden</string>
+    <string name="document_delete">Abbrechen</string>
+
+    <!-- WaitingDialog -->
+    <string name="waiting">Bitte warten...</string>
+
+    <!-- LoginActivity -->
+    <string name="login_pin">PIN</string>
+    <string name="login_btn">Anmelden</string>
+
+    <!-- MainActivity -->
+
+    <!-- NoticeCreateActivity -->
+    <string name="label_header">Betreff</string>
+    <string name="header_text"></string>
+    <string name="label_edittext">Notiztext</string>
+    <string name="edittext_text"></string>
+    <string name="label_textview">Preview - Notiztext</string>
+    <string name="button_save">Speichern</string>
+    <string name="button_encrypt_some">Verschlüsseln</string>
+    <string name="button_decrypt_some">Entschlüsseln</string>
+    <string name="button_encrypt_all">Alles verschlüsseln</string>
+    <string name="button_decrypt_all">Alles entschlüsseln</string>
+    <string name="button_delete_all">Alles löschen</string>
+    <string name="button_delete_marking">Markierungen löschen</string>
+    <string name="content"></string>
+    <!-- TaskListActivity -->
+    <string name="priority">Priorität</string>
+    <string name="state">Status</string>
+    <!-- NoticeListActivity -->
+    <string name="date">Datum</string>
+    <string name="subject">Betreff</string>
+    <string name="cmi_delete">Löschen</string>
+    <string name="cmi_open">Öffnen</string>
+    
+    <string name="ok">OK</string>
+</resources>

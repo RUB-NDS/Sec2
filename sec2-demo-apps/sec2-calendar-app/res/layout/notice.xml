@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@drawable/bg_page_tiles">
+
+	<RelativeLayout android:id="@+id/container" android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:background="#bfbebe" android:padding="10dip">
+
+		<TextView android:id="@+id/date" android:layout_width="90dip" android:layout_height="wrap_content"
+			android:text="@string/date" android:textStyle="bold" />
+
+		<TextView android:id="@+id/subject" android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:layout_toRightOf="@id/date" android:text="@string/subject" android:textStyle="bold" />
+
+	</RelativeLayout>
+
+	<ListView android:id="@+id/android:list" android:layout_width="fill_parent" android:layout_height="fill_parent" 
+		android:layout_below="@id/container" android:cacheColorHint="#00000000" />
+
+</RelativeLayout>

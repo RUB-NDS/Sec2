@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<array name="priority_entries">
+		<item>Hoch</item>
+		<item>Mittel</item>
+		<item>Niedrig</item>
+	</array>
+	<array name="priority_values">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+	</array>
+
+</resources>

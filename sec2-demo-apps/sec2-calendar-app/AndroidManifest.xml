@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="de.adesso.mobile.android.sec2"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="4"
+        android:targetSdkVersion="4" />
+
+    <!-- access to the exist-db -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- access to store an xml on sd storage -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:debuggable="true"
+        android:icon="@drawable/splash"
+        android:label="@string/app_name"
+        android:name=".app.Sec2Application" >
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label=""
+            android:name=".FileChooserActivity"
+            android:theme="@style/Sec2Theme"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label=""
+            android:name=".LoginActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label=""
+            android:name=".MainActivity"
+            android:theme="@style/Sec2Theme"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label=""
+            android:name=".NoticeCreateActivity"
+            android:theme="@style/Sec2Theme"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label=""
+            android:name=".NoticeListActivity"
+            android:theme="@style/Sec2Theme"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+         <activity
+            android:name=".TaskCreateActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/Sec2Theme"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".TaskListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/Sec2Theme"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/menu_usersinfos"
+            android:name="de.adesso.mobile.android.sec2.mwadapter.gui.UsersInfoActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/menu_groupinfos"
+            android:name="de.adesso.mobile.android.sec2.mwadapter.gui.GroupInfoActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:label="@string/menu_settings"
+            android:name="de.adesso.mobile.android.sec2.mwadapter.gui.MwAdapterPreferenceActivity">
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name="de.adesso.mobile.android.sec2.mwadapter.gui.UsersInGroupInfoActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name="de.adesso.mobile.android.sec2.mwadapter.gui.UserInfoActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:configChanges="keyboardHidden"
+            android:label="@string/app_name"
+            android:name=".SplashActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
