@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!--
+
+Thorsten Schreiber for the sec2 Project
+http://www.sonatype.com/people/2009/08/create-a-customized-build-process-in-maven/
+
+-->
+    <componient-set>
+      <components>
+	<component>
+	      <role>org.apache.maven.lifecycle.mapping.LifecycleMapping</role>
+	      <!-- The POM packaging for this type of project is 'wm-plugin' -->
+	      <role-hint>cap</role-hint>
+	      <implementation>
+		org.apache.maven.lifecycle.mapping.DefaultLifecycleMapping
+	      </implementation>
+	      <configuration>
+		    <phases>
+		      <!-- Generate the plugin descriptor marking this artifact
+			         as a plugin for the weathermaker application. -->
+		   <!--   <generate-resources>
+			org.sec2.mavenplugin.tokenmojo:sec2token-maven-plugin:${project.version}:compile
+		      </generate-resources>-->
+
+		      <compile>
+			org.apache.maven.plugins:maven-compiler-plugin:compile
+                        
+		      </compile><!--
+		      <process-test-resources>
+			org.apache.maven.plugins:maven-resources-plugin:testResources
+		      </process-test-resources>
+		      <test-compile>
+			org.apache.maven.plugins:maven-compiler-plugin:testCompile
+		      </test-compile>
+		      <test>
+			org.apache.maven.plugins:maven-surefire-plugin:test
+		      </test>-->
+		      <package>
+			org.sec2.mavenplugin.tokenmojo:sec2token-maven-plugin:package
+		      </package>
+                      
+                      <deploy>
+			org.sec2.mavenplugin.tokenmojo:sec2token-maven-plugin:deploy
+		      </deploy>
+                      
+		<!--      <install>
+			org.apache.maven.plugins:maven-install-plugin:install
+		      </install>
+		      <deploy>
+			org.apache.maven.plugins:maven-deploy-plugin:deploy
+		      </deploy>-->
+		    </phases>
+		
+
+
+	      </configuration>
+	    </component>
+    <component>
+      <role>org.apache.maven.artifact.handler.ArtifactHandler</role>
+      <role-hint>cap</role-hint>
+      <implementation>
+        org.apache.maven.artifact.handler.DefaultArtifactHandler
+      </implementation>
+      <configuration>
+        <!--the extension used by Maven in the repository-->
+        <extension>cap</extension>
+        <!--the type used when specifying dependencies etc.-->
+        <type>Javacard Applet</type>
+        <!--the packaging used when declaring an implementation of 
+          the packaging-->
+        <packaging>cap</packaging>
+      </configuration>
+    </component>
+
+	</components>
+    </componient-set>

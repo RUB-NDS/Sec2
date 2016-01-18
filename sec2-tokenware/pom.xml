@@ -1,0 +1,84 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.emsec.sec2</groupId>
+  <artifactId>sec2-tokenware</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>cap</packaging>
+
+  <name>sec2-tokenware</name>
+  <url>http://www.sec2.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+    <repositories>
+	   <repository>
+	      <id>sec2-repos</id>
+	      <url>https://repo.nds.ruhr-uni-bochum.de/repository/sec2-repos/</url>
+	    </repository>
+	</repositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>javacard</groupId>
+      <artifactId>javacard-api-repackaged</artifactId>
+      <version>2.2.2</version>
+    </dependency>
+
+  </dependencies>
+
+
+
+<build>
+    <plugins>
+      <plugin>
+        <groupId>org.sec2.mavenplugin.tokenmojo</groupId>
+        <artifactId>sec2token-maven-plugin</artifactId>
+        <version>1.0-SNAPSHOT</version>
+	<configuration>
+            <cardReaderName>G &amp; D Secure Flash Card 00 00</cardReaderName>
+	    <!-- CARD 0AC 64E00076 --> 
+	    <cardMAC>FD311141A1BBD641BC8BE2E347197E76</cardMAC>
+            <cardKey>D58E86EB3D2F98B4C71986BF249E43E9</cardKey>
+            <cardAID>a000000003000000</cardAID>
+            
+            <!-- CARD 0AC 64E00072 --> 
+            <!--
+            <cardMAC>5F146551F7648872BF83F9C344715C55</cardMAC>
+            <cardKey>1803900D05077239ABD4B0DEB1D1DF4A</cardKey>
+            <cardAID>a000000003000000</cardAID>
+	    -->
+          
+            <appletAID>0x6D:0x79:0x70:0x61:0x63:0x30:0x30:0x30:0x31</appletAID>
+            <appletClass>com.emsec.sec2.CryptoCard</appletClass>
+            <appletPacket>com.emsec.sec2</appletPacket>
+            <appletPackageAID>0x6D:0x79:0x70:0x61:0x63:0x6B:0x61:0x67:0x31</appletPackageAID>
+            <appletVersion>1.0</appletVersion>
+            
+            <javaCardKitLocation>/opt/java_card_kit-2_2_2/</javaCardKitLocation>
+        </configuration>
+	<extensions>true</extensions>
+<!--      <executions>
+          <execution>
+          <phase>compile</phase> 
+            <goals>
+              <goal>compile</goal>
+            </goals>
+          </execution>
+        </executions>-->
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.3.2</version>
+        <configuration>
+          <source>1.3</source>
+          <target>1.1</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
