@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLTooling
+    xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion"
+    xmlns:sec2saml='http://sec2.org/saml/v1/'
+    xmlns:ds='http://www.w3.org/2000/09/xmldsig#'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns='http://www.opensaml.org/xmltooling-config'
+    xsi:schemaLocation="http://www.opensaml.org/xmltooling-config xmltooling-config.xsd">
+    
+    <ObjectProviders>
+        
+        <ObjectProvider qualifiedName="sec2saml:groupName">
+            <BuilderClass className="org.opensaml.xml.schema.impl.XSStringBuilder"/>
+            <MarshallingClass className="org.opensaml.xml.schema.impl.XSStringMarshaller"/>
+            <UnmarshallingClass className="org.opensaml.xml.schema.impl.XSStringUnmarshaller"/>
+        </ObjectProvider>
+        
+        <ObjectProvider qualifiedName="sec2saml:groupOwnerID">
+            <BuilderClass className="org.opensaml.xml.schema.impl.XSBase64BinaryBuilder"/>
+            <MarshallingClass className="org.opensaml.xml.schema.impl.XSBase64BinaryMarshaller"/>
+            <UnmarshallingClass className="org.opensaml.xml.schema.impl.XSBase64BinaryUnmarshaller"/>
+        </ObjectProvider>
+        
+        <ObjectProvider qualifiedName="sec2saml:groupKey">
+            <BuilderClass className="org.opensaml.xml.signature.impl.KeyInfoBuilder"/>
+            <MarshallingClass className="org.opensaml.xml.signature.impl.KeyInfoMarshaller"/>
+            <UnmarshallingClass className="org.opensaml.xml.signature.impl.KeyInfoUnmarshaller"/>
+        </ObjectProvider>
+        
+        <ObjectProvider qualifiedName="sec2saml:userID">
+            <BuilderClass className="org.opensaml.xml.schema.impl.XSBase64BinaryBuilder"/>
+            <MarshallingClass className="org.opensaml.xml.schema.impl.XSBase64BinaryMarshaller"/>
+            <UnmarshallingClass className="org.opensaml.xml.schema.impl.XSBase64BinaryUnmarshaller"/>
+        </ObjectProvider>
+        
+        <ObjectProvider qualifiedName="sec2saml:encryptionCertificate">
+            <BuilderClass className="org.opensaml.xml.schema.impl.XSBase64BinaryBuilder"/>
+            <MarshallingClass className="org.opensaml.xml.schema.impl.XSBase64BinaryMarshaller"/>
+            <UnmarshallingClass className="org.opensaml.xml.schema.impl.XSBase64BinaryUnmarshaller"/>
+        </ObjectProvider>
+        
+        <ObjectProvider qualifiedName="sec2saml:signatureCertificate">
+            <BuilderClass className="org.opensaml.xml.schema.impl.XSBase64BinaryBuilder"/>
+            <MarshallingClass className="org.opensaml.xml.schema.impl.XSBase64BinaryMarshaller"/>
+            <UnmarshallingClass className="org.opensaml.xml.schema.impl.XSBase64BinaryUnmarshaller"/>
+        </ObjectProvider>
+        
+        <ObjectProvider qualifiedName="sec2saml:challenge">
+            <BuilderClass className="org.opensaml.xml.schema.impl.XSStringBuilder"/>
+            <MarshallingClass className="org.opensaml.xml.schema.impl.XSStringMarshaller"/>
+            <UnmarshallingClass className="org.opensaml.xml.schema.impl.XSStringUnmarshaller"/>
+        </ObjectProvider>
+        
+        <ObjectProvider qualifiedName="sec2saml:emailAddress">
+            <BuilderClass className="org.sec2.saml.xml.impl.EmailAddressBuilder"/>
+            <MarshallingClass className="org.opensaml.xml.schema.impl.XSStringMarshaller"/>
+            <UnmarshallingClass className="org.opensaml.xml.schema.impl.XSStringUnmarshaller"/>
+        </ObjectProvider>
+        
+        <ObjectProvider qualifiedName="sec2saml:createGroup">
+            <BuilderClass className="org.sec2.saml.xml.impl.CreateGroupBuilder"/>
+            <MarshallingClass className="org.sec2.saml.xml.impl.Sec2Marshaller"/>
+            <UnmarshallingClass className="org.sec2.saml.xml.impl.GroupRequestTypeUnmarshaller"/>
+        </ObjectProvider>
+
+        <ObjectProvider qualifiedName="sec2saml:getGroup">
+            <BuilderClass className="org.sec2.saml.xml.impl.GetGroupBuilder"/>
+            <MarshallingClass className="org.opensaml.xml.schema.impl.XSStringMarshaller"/>
+            <UnmarshallingClass className="org.opensaml.xml.schema.impl.XSStringUnmarshaller"/>
+        </ObjectProvider>
+
+        <ObjectProvider qualifiedName="sec2saml:updateGroup">
+            <BuilderClass className="org.sec2.saml.xml.impl.UpdateGroupBuilder"/>
+            <MarshallingClass className="org.sec2.saml.xml.impl.Sec2Marshaller"/>
+            <UnmarshallingClass className="org.sec2.saml.xml.impl.GroupRequestTypeUnmarshaller"/>
+        </ObjectProvider>
+
+        <ObjectProvider qualifiedName="sec2saml:deleteGroup">
+            <BuilderClass className="org.sec2.saml.xml.impl.DeleteGroupBuilder"/>
+            <MarshallingClass className="org.opensaml.xml.schema.impl.XSStringMarshaller"/>
+            <UnmarshallingClass className="org.opensaml.xml.schema.impl.XSStringUnmarshaller"/>
+        </ObjectProvider>
+
+        <ObjectProvider qualifiedName="sec2saml:getGroupMembers">
+            <BuilderClass className="org.sec2.saml.xml.impl.GetGroupMembersBuilder"/>
+            <MarshallingClass className="org.opensaml.xml.schema.impl.XSStringMarshaller"/>
+            <UnmarshallingClass className="org.opensaml.xml.schema.impl.XSStringUnmarshaller"/>
+        </ObjectProvider>
+
+        <ObjectProvider qualifiedName="sec2saml:getGroupsForUser">
+            <BuilderClass className="org.sec2.saml.xml.impl.GetGroupsForUserBuilder"/>
+            <MarshallingClass className="org.opensaml.xml.schema.impl.XSBase64BinaryMarshaller"/>
+            <UnmarshallingClass className="org.opensaml.xml.schema.impl.XSBase64BinaryUnmarshaller"/>
+        </ObjectProvider>
+        
+        <ObjectProvider qualifiedName="sec2saml:getKnownUsersForUser">
+            <BuilderClass className="org.sec2.saml.xml.impl.GetKnownUsersForUserBuilder"/>
+            <MarshallingClass className="org.opensaml.xml.schema.impl.XSBase64BinaryMarshaller"/>
+            <UnmarshallingClass className="org.opensaml.xml.schema.impl.XSBase64BinaryUnmarshaller"/>
+        </ObjectProvider>
+        
+        <ObjectProvider qualifiedName="sec2saml:addUsersToGroup">
+            <BuilderClass className="org.sec2.saml.xml.impl.AddUsersToGroupBuilder"/>
+            <MarshallingClass className="org.sec2.saml.xml.impl.Sec2Marshaller"/>
+            <UnmarshallingClass className="org.sec2.saml.xml.impl.GroupUsersRelationTypeUnmarshaller"/>
+        </ObjectProvider>
+        
+        <ObjectProvider qualifiedName="sec2saml:removeUsersFromGroup">
+            <BuilderClass className="org.sec2.saml.xml.impl.RemoveUsersFromGroupBuilder"/>
+            <MarshallingClass className="org.sec2.saml.xml.impl.Sec2Marshaller"/>
+            <UnmarshallingClass className="org.sec2.saml.xml.impl.GroupUsersRelationTypeUnmarshaller"/>
+        </ObjectProvider>
+        
+        <ObjectProvider qualifiedName="sec2saml:getUserInfoByID">
+            <BuilderClass className="org.sec2.saml.xml.impl.GetUserInfoByIDBuilder"/>
+            <MarshallingClass className="org.opensaml.xml.schema.impl.XSBase64BinaryMarshaller"/>
+            <UnmarshallingClass className="org.opensaml.xml.schema.impl.XSBase64BinaryUnmarshaller"/>
+        </ObjectProvider>
+
+        <ObjectProvider qualifiedName="sec2saml:getUserInfoByMail">
+            <BuilderClass className="org.sec2.saml.xml.impl.GetUserInfoByMailBuilder"/>
+            <MarshallingClass className="org.opensaml.xml.schema.impl.XSStringMarshaller"/>
+            <UnmarshallingClass className="org.opensaml.xml.schema.impl.XSStringUnmarshaller"/>
+        </ObjectProvider>
+        
+        <ObjectProvider qualifiedName="sec2saml:updateUser">
+            <BuilderClass className="org.sec2.saml.xml.impl.UpdateUserBuilder"/>
+            <MarshallingClass className="org.sec2.saml.xml.impl.Sec2Marshaller"/>
+            <UnmarshallingClass className="org.sec2.saml.xml.impl.UserBaseTypeUnmarshaller"/>
+        </ObjectProvider>
+        
+        <ObjectProvider qualifiedName="sec2saml:registerUser">
+            <BuilderClass className="org.sec2.saml.xml.impl.RegisterUserBuilder"/>
+            <MarshallingClass className="org.sec2.saml.xml.impl.Sec2Marshaller"/>
+            <UnmarshallingClass className="org.sec2.saml.xml.impl.RegisterUserUnmarshaller"/>
+        </ObjectProvider>
+        
+        <ObjectProvider qualifiedName="sec2saml:confirmUser">
+            <BuilderClass className="org.sec2.saml.xml.impl.ConfirmUserBuilder"/>
+            <MarshallingClass className="org.sec2.saml.xml.impl.ConfirmUserMarshaller"/>
+            <UnmarshallingClass className="org.sec2.saml.xml.impl.ConfirmUserUnmarshaller"/>
+        </ObjectProvider>
+        
+        <ObjectProvider qualifiedName="sec2saml:userInfo">
+            <BuilderClass className="org.sec2.saml.xml.impl.UserInfoBuilder"/>
+            <MarshallingClass className="org.sec2.saml.xml.impl.Sec2Marshaller"/>
+            <UnmarshallingClass className="org.sec2.saml.xml.impl.UserBaseTypeUnmarshaller"/>
+        </ObjectProvider>
+        
+        <ObjectProvider qualifiedName="sec2saml:groupInfo">
+            <BuilderClass className="org.sec2.saml.xml.impl.GroupInfoBuilder"/>
+            <MarshallingClass className="org.sec2.saml.xml.impl.Sec2Marshaller"/>
+            <UnmarshallingClass className="org.sec2.saml.xml.impl.GroupResponseTypeUnmarshaller"/>
+        </ObjectProvider>
+        
+        <ObjectProvider qualifiedName="sec2saml:groupMemberList">
+            <BuilderClass className="org.sec2.saml.xml.impl.GroupMemberListBuilder"/>
+            <MarshallingClass className="org.sec2.saml.xml.impl.Sec2Marshaller"/>
+            <UnmarshallingClass className="org.sec2.saml.xml.impl.UserListTypeUnmarshaller"/>
+        </ObjectProvider>
+        
+        <ObjectProvider qualifiedName="sec2saml:groupList">
+            <BuilderClass className="org.sec2.saml.xml.impl.GroupListBuilder"/>
+            <MarshallingClass className="org.sec2.saml.xml.impl.Sec2Marshaller"/>
+            <UnmarshallingClass className="org.sec2.saml.xml.impl.GroupListUnmarshaller"/>
+        </ObjectProvider>
+        
+        <ObjectProvider qualifiedName="sec2saml:userList">
+            <BuilderClass className="org.sec2.saml.xml.impl.UserListBuilder"/>
+            <MarshallingClass className="org.sec2.saml.xml.impl.Sec2Marshaller"/>
+            <UnmarshallingClass className="org.sec2.saml.xml.impl.UserListTypeUnmarshaller"/>
+        </ObjectProvider>
+        
+    </ObjectProviders>
+    
+    <ValidatorSuites>
+        <ValidatorSuite id="sec2saml-schema-validator">
+            <!-- Core Types used in an encrypted Attribute -->
+            <Validator qualifiedName="saml2:Attribute" className="org.opensaml.saml2.core.validator.AttributeSchemaValidator"/>
+            <Validator qualifiedName="ds:Signature" className="org.opensaml.xml.signature.validator.SignatureSchemaValidator"/>
+
+            <!-- Types -->
+            <Validator qualifiedName="sec2saml:groupName" className="org.opensaml.xml.schema.validator.XSStringSchemaValidator"/>
+            <Validator qualifiedName="sec2saml:groupOwnerID" className="org.opensaml.xml.schema.validator.XSBase64BinarySchemaValidator"/>
+            <Validator qualifiedName="sec2saml:groupKey" className="org.opensaml.xml.signature.validator.KeyInfoTypeSchemaValidator"/>
+            <Validator qualifiedName="sec2saml:userID" className="org.opensaml.xml.schema.validator.XSBase64BinarySchemaValidator"/>
+            <Validator qualifiedName="sec2saml:emailAddress" className="org.sec2.saml.xml.validator.EmailAddressTypeSchemaValidator"/>
+            <Validator qualifiedName="sec2saml:signatureCertificate" className="org.opensaml.xml.schema.validator.XSBase64BinarySchemaValidator"/>
+            <Validator qualifiedName="sec2saml:encryptionCertificate" className="org.opensaml.xml.schema.validator.XSBase64BinarySchemaValidator"/>
+            <Validator qualifiedName="sec2saml:challenge" className="org.opensaml.xml.schema.validator.XSStringSchemaValidator"/>
+            
+            <!-- Elements -->
+            <Validator qualifiedName="sec2saml:addUsersToGroup" className="org.sec2.saml.xml.validator.GroupUsersRelationTypeSchemaValidator"/>
+            <Validator qualifiedName="sec2saml:createGroup" className="org.sec2.saml.xml.validator.GroupRequestTypeSchemaValidator"/>
+            <Validator qualifiedName="sec2saml:confirmUser" className="org.sec2.saml.xml.validator.ConfirmUserSchemaValidator"/>
+            <Validator qualifiedName="sec2saml:deleteGroup" className="org.opensaml.xml.schema.validator.XSStringSchemaValidator"/>
+            <Validator qualifiedName="sec2saml:getGroup" className="org.opensaml.xml.schema.validator.XSStringSchemaValidator"/>
+            <Validator qualifiedName="sec2saml:getGroupMembers" className="org.opensaml.xml.schema.validator.XSStringSchemaValidator"/>
+            <Validator qualifiedName="sec2saml:getUserInfoByID" className="org.opensaml.xml.schema.validator.XSBase64BinarySchemaValidator"/>
+            <Validator qualifiedName="sec2saml:getUserInfoByMail" className="org.opensaml.xml.schema.validator.XSStringSchemaValidator"/>
+            <Validator qualifiedName="sec2saml:groupInfo" className="org.sec2.saml.xml.validator.GroupResponseTypeSchemaValidator"/>
+            <Validator qualifiedName="sec2saml:groupList" className="org.sec2.saml.xml.validator.GroupListSchemaValidator"/>
+            <Validator qualifiedName="sec2saml:groupMemberList" className="org.sec2.saml.xml.validator.UserListTypeSchemaValidator"/>
+            <Validator qualifiedName="sec2saml:registerUser" className="org.sec2.saml.xml.validator.RegisterUserSchemaValidator"/>
+            <Validator qualifiedName="sec2saml:removeUsersFromGroup" className="org.sec2.saml.xml.validator.GroupUsersRelationTypeSchemaValidator"/>
+            <Validator qualifiedName="sec2saml:updateGroup" className="org.sec2.saml.xml.validator.GroupRequestTypeSchemaValidator"/>
+            <Validator qualifiedName="sec2saml:updateUser" className="org.sec2.saml.xml.validator.UserRequestTypeSchemaValidator"/>
+            <Validator qualifiedName="sec2saml:userInfo" className="org.sec2.saml.xml.validator.UserResponseTypeSchemaValidator"/>
+            <Validator qualifiedName="sec2saml:userList" className="org.sec2.saml.xml.validator.UserListTypeSchemaValidator"/>
+        </ValidatorSuite>
+    </ValidatorSuites>
+</XMLTooling>

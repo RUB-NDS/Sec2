@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">MwAdapter</string>
+    
+    <!-- PreferenceActivity -->
+    <string name="pref_configuration">Verbindungskonfiguration</string>
+    <string name="pref_middleware">Port der Middleware:</string>
+    <string name="pref_middleware_header">Middleware</string>
+    <string name="pref_middleware_summary">Port</string>
+    <string name="pref_cloud_host_header">Cloud-Host</string>
+    <string name="pref_cloud_host">Hostname oder IP der Cloud:</string>
+    <string name="pref_cloud_host_summary">Hostname oder IP-Adresse</string>
+    <string name="pref_cloud_port_header">Cloud-Port</string>
+    <string name="pref_cloud_port">Port der Cloud:</string>
+    <string name="pref_cloud_port_summary">Port der Cloud</string>
+    <string name="pref_cloud_location_header">Cloud-Location</string>
+    <string name="pref_cloud_location">Location in der Cloud:</string>
+    <string name="pref_cloud_location_summary">Pfad in der Cloud</string>
+    <string name="register_info">Die Anwendung muß einmalig an der Middleware registriert, bevor sie benutzt werden kann.
+        Stellen Sie zuvor sicher, daß der richtige Port eingetragen wurde.</string>
+    <string name="register">Registrieren</string>
+    <string name="status">Status: </string>
+    <string name="status_registered">registriert</string>
+    <string name="status_not_registered">unregistriert</string>
+    <string name="register_success_title">App-Registrierung</string>
+    <string name="register_success_true">App wurde erfolgreich bei der Middleware registriert.</string>
+    <string name="register_success_false_error">FEHLER: App konnte nicht bei der Middleware registriert werden! </string>
+    <string name="register_success_false_key">FEHLER: App konnte nicht bei der Middleware registriert werden. Keinen Schlüssel erhalten!</string>
+    <string name="register_success_false_commit">FEHLER: App bei der Middleware registriert und Schlüssel erhalten. Der Schlüssel konnte jedoch nicht gespeichert werden!</string>
+    
+    <!-- UsersInfoActivity -->
+    <string name="usersinfo_title">Benutzerinformationen</string>
+    <string name="usersinfo_username">Benutzername: </string>
+    <string name="usersinfo_useremail">Email: </string>
+    <string name="usersinfo_success_title">Benutzerinfoabfrage</string>
+    <string name="usersinfo_success_false_key">FEHLER: Benutzerinformationen konnten nicht abgerufen werden. Bitte registrieren sie zunächst die App bei der Middleware!</string>
+    <string name="usersinfo_success_false_error">FEHLER: Benutzerinformationen konnten nicht abgerufen werden. </string>
+    <string name="usersinfo_success_false_no_registered_user">FEHLER: Keine Benutzerinformationen zum registrieren Benutzer gefunden!</string>
+    <string name="usersinfo_allusers">Alle bekannten Benutzer</string>
+    <string name="usersinfo_registereduser_title">Registrierter Benutzer</string>
+    
+    <!-- UserInfoActivity -->
+    <string name="userinfo_username">Benutzername: </string>
+    <string name="userinfo_useremail">Email: </string>
+    <string name="userinfo_success_title">Benutzerinfoabfrage</string>
+    <string name="userinfo_success_false_user">FEHLER: Benutzerinformationen konnten nicht abgerufen werden. Es wurde kein Benutzer gefunden!</string>
+    <string name="userinfo_success_false_key">FEHLER: Benutzerinformationen konnten nicht abgerufen werden. Bitte registrieren sie zunächst die App bei der Middleware!</string>
+    <string name="userinfo_success_false_error">FEHLER: Benutzerinformationen konnten nicht abgerufen werden. </string>
+    <string name="userinfo_groupmemberships">Gruppenmitgliedschaften:</string>
+    
+    <!-- UsersInGroupInfoActivity -->
+    <string name="usersingroupinfo_title">Infos für Gruppe</string>
+    <string name="usersingroupinfo_owner">Besitzer:</string>
+    <string name="usersingroupinfo_members">Gruppenmitglieder:</string>
+    <string name="usersingroupinfo_success_title">Abfrage der Benutzer in der Gruppe</string>
+    <string name="usersingroupinfo_success_false_key">FEHLER: Benutzerinformationen für die Gruppe konnten nicht abgerufen werden. Bitte registrieren sie zunächst die App bei der Middleware!</string>
+    <string name="usersingroupinfo_success_false_group">FEHLER: Gruppeninformationen konnten nicht abgerufen werden. Es wurde keine Gruppe gefunden!</string>
+    <string name="usersingroupinfo_success_false_error">FEHLER: Benutzerinformationen für die Gruppe konnten nicht abgerufen werden. </string>
+    
+    <!-- GroupInfoActivity -->
+    <string name="groupinfo_title">Angelegte Gruppen</string>
+    <string name="groupinfo_success_title">Gruppeninfoabfrage</string>
+    <string name="groupinfo_success_false_key">FEHLER: Gruppeninformationen konnten nicht abgerufen werden. Bitte registrieren sie zunächst die App bei der Middleware!</string>
+    <string name="groupinfo_success_false_error">FEHLER: Gruppeninformationen konnten nicht abgerufen werden. </string>
+    
+    <!-- Misc -->
+    <string name="ok">OK</string>
+    <string name="username_not_found">[Kein Name gefunden]</string>
+    <string name="hint_host">example.com</string>
+    <string name="hint_path">/path</string>
+</resources>

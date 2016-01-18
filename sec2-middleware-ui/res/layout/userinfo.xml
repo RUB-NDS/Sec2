@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:stretchColumns="1">
+
+    <TableRow android:id="@+id/name_row">
+        <TextView
+            android:layout_column="1"
+            android:text="@string/userinfo_username"
+            android:padding="3dip"
+            android:layout_gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/userinfo_username_value"
+            android:gravity="right"
+            android:padding="3dip"
+            android:layout_gravity="center_vertical"/>
+    </TableRow>
+    <TableRow android:id="@+id/email_row">
+        <TextView
+            android:layout_column="1"
+            android:text="@string/userinfo_useremail"
+            android:padding="3dip"
+            android:layout_gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/userinfo_useremail_value"
+            android:gravity="right"
+            android:padding="3dip"
+            android:layout_gravity="center_vertical"/>
+    </TableRow>
+    <TableRow android:id="@+id/group_row">
+    	<TextView
+    	    android:layout_column="1"
+        	android:text="@string/userinfo_groupmemberships"
+        	android:padding="3dip"
+        	android:layout_gravity="center_vertical"/>
+   	</TableRow>
+    <View
+        android:layout_height="1dip"
+        android:background="#FF909090" />
+    <ListView
+        android:id="@+id/userinfo_grouplist"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+</TableLayout>

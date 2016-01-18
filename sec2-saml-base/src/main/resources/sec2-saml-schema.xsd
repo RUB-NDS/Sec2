@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema id="sec2-saml-schema"
+    targetNamespace="http://sec2.org/saml/v1/"
+    elementFormDefault="qualified"
+    xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:sec2saml="http://sec2.org/saml/v1/"
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+>
+
+  <import namespace='http://www.w3.org/2000/09/xmldsig#'
+          schemaLocation="http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd" />
+
+  <!--
+    ** Type definitions **
+    -->
+
+  <simpleType name="emailAddressType">
+    <restriction base="string">
+      <pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]+" />
+    </restriction>
+  </simpleType>
+
+  <complexType name="userBaseType" abstract="true">
+    <sequence>
+      <element name="userID" type="base64Binary" />
+      <element name="emailAddress" type="sec2saml:emailAddressType" />
+    </sequence>
+  </complexType>
+
+  <complexType name="userRequestType" >
+    <complexContent>
+      <extension base="sec2saml:userBaseType" />
+    </complexContent>
+  </complexType>
+
+  <complexType name="userResponseType" >
+    <complexContent>
+      <extension base="sec2saml:userBaseType" />
+    </complexContent>
+  </complexType>
+
+  <complexType name="groupBaseType" abstract="true">
+    <sequence>
+      <element name="groupName" type="string" />
+      <element name="groupOwnerID" type="base64Binary" />
+    </sequence>
+  </complexType>
+  
+  <complexType name="groupRequestType" >
+    <complexContent>
+      <extension base="sec2saml:groupBaseType" />
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <complexType name="groupUsersRelationType">
+    <sequence>
+      <element name="groupName" type="string" />
+      <element name="userID" type="base64Binary" minOccurs="1" maxOccurs="unbounded" />
+    </sequence>
+  </complexType>
+
+  <complexType name="userListType">
+    <sequence>
+      <element name="userID" type="base64Binary" minOccurs="0" maxOccurs="unbounded" />
+    </sequence>
+  </complexType>
+  
+  <complexType name="groupResponseType">
+    <complexContent>
+      <extension base="sec2saml:groupBaseType">
+        <sequence>
+          <element name="groupKey" type="ds:KeyInfoType" />
+          <!-- can be omitted if there are many users in a group -->
+          <element name="groupMemberList" type ="sec2saml:userListType" minOccurs="0">
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <!--
+    ** Request definitions **
+    -->
+
+  <!-- 1. Fetch information about a user -->
+  <element name="getUserInfoByID" type="base64Binary" />
+  <element name="getUserInfoByMail" type="string" />
+  
+  <!-- 2. Fetch information about a group -->
+  <element name="getGroup" type="string" />
+  
+  <!-- 3. Fetch all users in a group -->
+  <element name="getGroupMembers" type="string" />
+  
+  <!-- 4. Fetch all groups that have a certain user as member -->
+  <element name="getGroupsForUser" type="base64Binary" />
+  
+  <!-- 5. Fetch all other users of all groups a certain user is member of -->
+  <element name="getKnownUsersForUser" type="base64Binary" />
+  
+  <!-- 6.	Register a new user -->
+  <element name="registerUser">
+    <complexType>
+      <sequence>
+        <element name="signatureCertificate" type="base64Binary" />
+        <element name="encryptionCertificate" type="base64Binary" />
+      </sequence>
+    </complexType>
+  </element>
+  
+  <!-- 7. Validate email address of a user -->
+  <element name="confirmUser">
+    <complexType>
+      <sequence>
+        <element name="challenge" type="string" />
+        <element ref="ds:Signature" />
+      </sequence>
+      <attribute name="ID" type="ID" use="required"/>
+    </complexType>
+  </element>
+  
+  <!-- 8. Change attributes of a user -->
+  <element name="updateUser" type="sec2saml:userRequestType" />
+  
+  <!-- 9. Create a new group -->
+  <element name="createGroup" type="sec2saml:groupRequestType" />
+  
+  <!-- 10. Change attributes of a group -->
+  <element name="updateGroup" type="sec2saml:groupRequestType" />
+  
+  <!-- 11. Delete a group -->
+  <element name="deleteGroup" type="string" />
+  
+  <!-- 12. Add users to a group -->
+  <element name="addUsersToGroup" type="sec2saml:groupUsersRelationType" />
+  
+  <!-- 13. Remove users from a group -->
+  <element name="removeUsersFromGroup" type="sec2saml:groupUsersRelationType" />
+  
+  <!--
+    ** Response definitions **
+    -->
+
+  <!-- 1. Information about a user -->
+  <element name="userInfo" type="sec2saml:userResponseType" />
+  
+  <!-- 2. Information about a group -->
+  <element name="groupInfo" type="sec2saml:groupResponseType" />
+  
+  <!-- 3. A list of groups -->
+  <element name="groupList">
+    <complexType>
+      <sequence>
+        <element name="groupName" type="string" minOccurs="0" maxOccurs="unbounded" />
+      </sequence>
+    </complexType>
+  </element>
+  
+  <!-- 4. A list of users -->
+  <element name="userList" type ="sec2saml:userListType" />
+
+</schema>
+

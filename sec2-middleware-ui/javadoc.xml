@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="doc" name="api docs">
+<target name="doc" description="my docs">
+    <javadoc destdir="docs" doctitle="MwAdapter-Library" verbose="on" 
+        use="true" 
+        classpath="/opt/android-sdk-update-manager/platforms/android-10/android.jar:libs/commons-codec-1.6.jar"
+        sourcepath="src/main/java;gen"
+        linkoffline="http://d.android.com/reference /opt/android-sdk-update-manager/docs/reference"
+        stylesheetfile="/opt/android-sdk-update-manager/docs/assets/android-developer-docs.css"
+        access="package">
+    </javadoc>
+</target>
+</project>

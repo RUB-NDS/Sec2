@@ -1,0 +1,33 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:stretchColumns="1">
+
+    <TableRow android:id="@+id/owner_row">
+        <TextView
+            android:layout_column="1"
+            android:text="@string/usersingroupinfo_owner"
+            android:padding="3dip"
+            android:layout_gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/usersingroupinfo_owner_value"
+            android:gravity="right"
+            android:padding="3dip"
+            android:layout_gravity="center_vertical"/>
+    </TableRow>
+    
+    <TableRow android:id="@+id/members_row">
+    	<TextView
+    	    android:layout_column="1"
+        	android:text="@string/usersingroupinfo_members"
+        	android:padding="3dip"
+        	android:layout_gravity="center_vertical"/>
+   	</TableRow>
+    <View
+        android:layout_height="1dip"
+        android:background="#FF909090"/>
+    <ListView
+        android:id="@+id/usersingroup_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+</TableLayout>

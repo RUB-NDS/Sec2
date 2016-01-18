@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="@string/pref_configuration">
+		<de.adesso.mobile.android.sec2.mwadapter.gui.components.ValidatedEditTextPreference
+		    android:title="@string/pref_middleware_header"
+			android:summary="@string/pref_middleware_summary"
+			android:dialogTitle="@string/pref_middleware"
+			android:key="middleware_port"
+			android:defaultValue="50001"
+			android:numeric="integer"
+			android:maxLength="5">
+		</de.adesso.mobile.android.sec2.mwadapter.gui.components.ValidatedEditTextPreference>
+		<de.adesso.mobile.android.sec2.mwadapter.gui.components.ValidatedEditTextPreference
+		    android:title="@string/pref_cloud_host_header"
+			android:summary="@string/pref_cloud_host_summary"
+			android:dialogTitle="@string/pref_cloud_host"
+			android:key="cloud_host"
+			android:hint="@string/hint_host"
+			android:maxLength="255">
+		</de.adesso.mobile.android.sec2.mwadapter.gui.components.ValidatedEditTextPreference>
+		<de.adesso.mobile.android.sec2.mwadapter.gui.components.ValidatedEditTextPreference
+		    android:title="@string/pref_cloud_port_header"
+			android:summary="@string/pref_cloud_port_summary"
+			android:dialogTitle="@string/pref_cloud_port"
+			android:key="cloud_port"
+			android:defaultValue="80"
+			android:numeric="integer"
+			android:maxLength="5">
+		</de.adesso.mobile.android.sec2.mwadapter.gui.components.ValidatedEditTextPreference>
+		<de.adesso.mobile.android.sec2.mwadapter.gui.components.ValidatedEditTextPreference
+		    android:title="@string/pref_cloud_location_header"
+			android:summary="@string/pref_cloud_location_summary"
+			android:dialogTitle="@string/pref_cloud_location"
+			android:key="cloud_location"
+			android:hint="@string/hint_path"
+			android:maxLength="255">
+		</de.adesso.mobile.android.sec2.mwadapter.gui.components.ValidatedEditTextPreference>
+	</PreferenceCategory>
+</PreferenceScreen>
