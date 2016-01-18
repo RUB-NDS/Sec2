@@ -1,0 +1,7 @@
+mvn deploy:deploy-file -Durl=file:////repo  -DrepositoryId=file.repo -Dfile=path-to-your.jar -DgroupId=some.external.project.group -DartifactId=the-artifact-name -Dversion=1.0 -Dpackaging=jar;
+
+mvn deploy:deploy-file -Durl=file:/home/hiphop-dave/Dokumente/sec2/SVN_nds_sec2/Sec2_Partner/software.maven/sec2-basis/sec2-extern/repo  -DrepositoryId=file.repo -Dfile=/home/hiphop-dave/Dokumente/sec2/SVN_nds_sec2/Sec2_Partner/software.maven/sec2-basis/sec2-extern/lib/jar.jar -DgroupId=org.sec2.repos -DartifactId=sec2-repackged-jars -Dversion=1.0 -Dpackaging=jar
+
+
+org.sec2.pipeline
+org.sec2.research.core.middleware.xml

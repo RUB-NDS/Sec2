@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+  <comment>Sec2 configuration</comment>
+  <!-- version of sec2 -->
+  <entry key="org.sec2.version">0.1</entry>
+  <entry key="org.sec2.token.swtoken.filename">/var/lib/sec2/crypto-data</entry>
+  
+  <entry key="org.sec2.tokentype">Hardware</entry>
+</properties>
+

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.8" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <NonVisualComponents>
+    <Component class="org.sec2.saml.client.gui.controller.GuiController" name="controller">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="GuiController.getInstance()"/>
+      </AuxValues>
+    </Component>
+    <Component class="org.sec2.saml.client.gui.controller.view.converter.MemberListToStringConverter" name="memberListToStringConverter1">
+    </Component>
+  </NonVisualComponents>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="error" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="title" min="-2" max="-2" attributes="0"/>
+                          <Component id="updateGroupsButton" alignment="0" min="-2" pref="132" max="-2" attributes="0"/>
+                          <Component id="jScrollPane1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="selectedGroupNameLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="selectedGroupOwnerLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="selectedGroupMemberLabel" pref="497" max="32767" attributes="0"/>
+                          <Component id="selectedGroupMemberValue" alignment="0" max="32767" attributes="0"/>
+                          <Component id="selectedGroupOwnerValue" alignment="0" max="32767" attributes="0"/>
+                          <Component id="selectedGroupNameValue" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="newGroupName" max="32767" attributes="0"/>
+                          <Component id="addMemberEmail" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="addMemberButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="removeMemberButton" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="newGroupButton" alignment="1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="title" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="updateGroupsButton" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="selectedGroupNameLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="selectedGroupNameValue" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="selectedGroupOwnerLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="selectedGroupOwnerValue" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="selectedGroupMemberLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="selectedGroupMemberValue" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="jScrollPane1" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
+              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="addMemberEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="addMemberButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="removeMemberButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="newGroupName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="newGroupButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="error" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="title">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Ubuntu" size="24" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Group"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="updateGroupsButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Update Groups"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="updateGroupsButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JList" name="knownGroups">
+          <Properties>
+            <Property name="selectionMode" type="int" value="0"/>
+          </Properties>
+          <BindingProperties>
+            <BindingProperty name="elements" source="controller" sourcePath="${knownGroups}" target="knownGroups" targetPath="elements" updateStrategy="0" immediately="false">
+              <BindingParameter name="DISPLAY" value="${groupName}"/>
+            </BindingProperty>
+          </BindingProperties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="selectedGroupNameLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Selected Group Name:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="selectedGroupNameValue">
+      <BindingProperties>
+        <BindingProperty name="text" source="knownGroups" sourcePath="${selectedElement.groupName}" target="selectedGroupNameValue" targetPath="text" updateStrategy="1" immediately="false">
+          <Property name="nullValue" type="java.lang.String" value="nothing selected"/>
+          <Property name="incompletePathValue" type="java.lang.String" value="nothing selected"/>
+        </BindingProperty>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="selectedGroupOwnerLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Selected Group Owner:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="selectedGroupOwnerValue">
+      <BindingProperties>
+        <BindingProperty name="text" source="knownGroups" sourcePath="${selectedElement.owner.emailAddress}" target="selectedGroupOwnerValue" targetPath="text" updateStrategy="1" immediately="false">
+          <Property name="nullValue" type="java.lang.String" value="nothing selected"/>
+          <Property name="incompletePathValue" type="java.lang.String" value="nothing selected"/>
+        </BindingProperty>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="selectedGroupMemberLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Selected Group Members:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="selectedGroupMemberValue">
+      <BindingProperties>
+        <BindingProperty name="text" source="knownGroups" sourcePath="${selectedElement.members}" target="selectedGroupMemberValue" targetPath="text" updateStrategy="1" immediately="false">
+          <Property name="nullValue" type="java.lang.String" value="nothing selected"/>
+          <Property name="incompletePathValue" type="java.lang.String" value="nothing selected"/>
+          <Property name="converter" type="org.jdesktop.beansbinding.Converter" editor="org.netbeans.modules.form.ComponentChooserEditor">
+            <ComponentRef name="memberListToStringConverter1"/>
+          </Property>
+        </BindingProperty>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Add new Group:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="newGroupName">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="new group name"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="newGroupButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Add"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="newGroupButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Add or Remove Member to Group:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="addMemberEmail">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="member email"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="addMemberButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Add"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addMemberButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="error">
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Delete selected Group"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="removeMemberButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Remove"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="removeMemberButtonActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>
