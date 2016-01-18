@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <!--<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n%ex{short}</pattern>-->
+      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%X{req.remoteAddr}:%X{req.remotePort} - %X{sec2.user}:%X{sec2.request}] | %-5level %-35logger{20} - %msg%n%ex</pattern>
+    </encoder>
+  </appender>
+
+    <logger name="org.sec2.frontend" level="DEBUG"/>
+    <logger name="org.sec2.frontend.Endpoint" level="TRACE"/>
+    <logger name="org.sec2.frontend.exceptions" level="INFO"/>
+    <logger name="org.sec2.frontend.samlengine.KeyserverRequestVerifier" level="INFO"/>
+    <logger name="org.sec2.frontend.processors" level="TRACE"/>
+    <logger name="org.sec2.frontend.samlengine.KeyserverBackendKeyInfoCredentialResolver" level="TRACE"/>
+
+  <root level="info">
+    <appender-ref ref="STDOUT" />
+  </root>
+</configuration>

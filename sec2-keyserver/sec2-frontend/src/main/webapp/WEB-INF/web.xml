@@ -1,0 +1,32 @@
+<!DOCTYPE web-app PUBLIC
+          "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+          "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.4" metadata-complete="true">
+    <display-name>Sec² Keyserver</display-name>
+    <servlet>
+        <servlet-name>keyserver</servlet-name>
+        <servlet-class>org.sec2.frontend.Endpoint</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>keyserver</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <filter>
+      <filter-name>MDCInsertingServletFilter</filter-name>
+      <filter-class>org.sec2.frontend.MDCInsertingServletFilter</filter-class>
+    </filter>
+    <filter>
+      <filter-name>CacheDisablingServletFilter</filter-name>
+      <filter-class>org.sec2.frontend.CacheDisablingServletFilter</filter-class>
+    </filter>
+    <filter-mapping>
+      <filter-name>MDCInsertingServletFilter</filter-name>
+      <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+      <filter-name>CacheDisablingServletFilter</filter-name>
+      <url-pattern>/*</url-pattern>
+    </filter-mapping> 
+</web-app>
+

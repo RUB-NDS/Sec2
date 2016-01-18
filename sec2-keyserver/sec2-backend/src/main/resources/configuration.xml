@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>Sec2 KeyServer configuration</comment>
+	<!-- Database properties -->
+	<entry key="database.driver">com.mysql.jdbc.Driver</entry>
+	<entry key="database.url">jdbc:mysql://localhost/sec2_keyserver_persistent</entry>
+	<entry key="database.username">sec2_keyserver</entry>
+	<entry key="database.password">sec2_SEC2915</entry>
+	
+	<!--  HSM properties -->
+	<entry key="hsm.host">134.147.198.90</entry>
+	<entry key="hsm.timeout">1000</entry>
+	<entry key="hsm.username">SEC2_BACKEND</entry>
+	<entry key="hsm.password">utimaco</entry>
+	
+	<!-- Keyserver properties -->
+	<entry key="keyserver.saml.signature.type">SHA256withRSA</entry>
+	<entry key="keyserver.saml.signature.keyname">Sec2 KeyServer Signature Key</entry>
+	<entry key="keyserver.provider">CryptoServer</entry>
+	<entry key="keyserver.keystore.type">CryptoServer</entry>
+	<entry key="keyserver.keystore.stream"></entry>
+	<entry key="keyserver.keystore.password"></entry>
+	<entry key="keyserver.securerandom.type">CryptoServer</entry>
+        <entry key="keyserver.securerandom.provider">CryptoServer</entry>
+        <entry key="keyserver.messagedigest.provider">CryptoServer</entry>
+	<entry key="keyserver.messagedigest.type">SHA-256</entry>
+	<entry key="keyserver.encapsulation.type">RSA/ECB/OAEPPadding</entry>
+	<entry key="keyserver.encapsulation.type.internal">RSA/NONE/OAEPPadding</entry>
+	<entry key="keyserver.encapsulation.keyname">Sec2 KeyServer Private</entry>
+	<entry key="keyserver.groups.keys.length">128</entry>
+	<entry key="keyserver.groups.keys.type">AES</entry>
+	<entry key="keyserver.challenge.size">64</entry>
+	
+	<!-- Keyserver ServerInfo properties -->
+	<entry key="keyserver.saml.signature.certificate.url">sec2.server.sign.crt</entry>
+	<entry key="keyserver.saml.encryption.certificate.url">sec2.server.enc.crt</entry>
+	<entry key="keyserver.saml.endpoint.url">https://sec2.keyserver.endpoint.url</entry>
+
+	<!-- Mail Service properties -->
+	<entry key="mail.smtp.host">smtp.gmail.com</entry>
+	<entry key="mail.smtp.username">sec2.keyserver@gmail.com</entry>
+	<entry key="mail.smtp.password">sec2.keyserver2013</entry>
+	<entry key="mail.smtp.port">587</entry>
+	<entry key="mail.smtp.starttls.enable">true</entry>
+	<entry key="mail.smtp.auth">true</entry>
+	<entry key="mail.from">sec2.keyserver@googlemail.com</entry>
+</properties>

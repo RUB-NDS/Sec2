@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+  <comment>Sec2 Keyserver Frontend configuration</comment>
+  <!-- Seconds a request's timestamp is allowed to differ from local clock -->
+  <entry key="keyserver.frontend.timestampOffset">300</entry>
+  <!-- Configuration of the recentIDs cache.
+  If expireAfterWrite is set smaller than the timestampOffset (see above),
+  replay attacks are possible -->
+  <entry key="keyserver.frontend.recentIDsCacheConfig">expireAfterWrite=300s</entry>
+  <!-- Seconds a response's assertion is declared to be valid -->
+  <entry key="keyserver.frontend.assertionValidity">300</entry>
+  <!-- Maximum number of users' certificates kept in RAM -->
+  <entry key="keyserver.frontend.keyCacheConfig">maximumSize=100</entry>
+</properties>
