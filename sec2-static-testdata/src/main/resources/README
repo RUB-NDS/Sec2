@@ -1,0 +1,3 @@
+To generate new keys and new certificates, simply run "genTestKeysAndCerts.sh".
+The tests need only the "*.crt" and "*.pkcs8" files.
+
