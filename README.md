@@ -8,7 +8,9 @@ To test the developed application, you can proceed as follows:
 
 Please Note: you have to compile the application with Apache maven 3.2.3. Otherwise, the following exception will appear: 
 NoClassDefFoundError:org/eclipse/aether/spi/connector/Transfer$State
+
 More information on this problem can be found here: http://stackoverflow.com/questions/28717739/exception-in-thread-pool-1-thread-1-java-lang-noclassdeffounderror-org-eclips
+
 
 First, copy the crypto-data to your lib:
 ```bash
