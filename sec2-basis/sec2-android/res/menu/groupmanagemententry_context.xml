@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/gm_context_add_user"
+        android:title="@string/gm_context_add_user"/>
+    <item
+        android:id="@+id/gm_context_delete_group"
+        android:title="@string/gm_context_delete_group"/>
+</menu>

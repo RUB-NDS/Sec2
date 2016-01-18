@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>sec2-basis</artifactId>
+        <groupId>org.sec2.basis</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent> 
+    <groupId>org.sec2.android</groupId>
+    <artifactId>sec2-android</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>sec2-android</name>
+    <description>Android Middleware App</description>
+    <packaging>apk</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android</artifactId>
+            <version>4.1.1.4</version>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <artifactId>xpp3</artifactId>
+                    <groupId>xpp3</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        
+        <dependency>
+            <groupId>xpp3</groupId>
+            <artifactId>xpp3_min</artifactId>
+            <version>1.1.4c</version>
+        </dependency>
+                
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>15.0</version>
+        </dependency>
+
+        <!-- Inclusion for sqlCipher integration with maven-->
+        <dependency>
+            <groupId>net.sqlcipher</groupId>
+            <artifactId>sql-cipher</artifactId>
+            <version>2.0.8</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>net.sqlcipher.natives</groupId>
+            <artifactId>libdatabase_sqlcipher</artifactId>
+            <version>2.0.8</version>
+            <scope>runtime</scope>
+            <type>so</type>
+        </dependency>
+        <dependency>
+            <groupId>net.sqlcipher.natives</groupId>
+            <artifactId>libsqlcipher_android</artifactId>
+            <version>2.0.8</version>
+            <scope>runtime</scope>
+            <type>so</type>
+        </dependency>
+        <dependency>
+            <groupId>net.sqlcipher.natives</groupId>
+            <artifactId>libstlport_shared</artifactId>
+            <version>2.0.8</version>
+            <scope>runtime</scope>
+            <type>so</type>
+        </dependency>
+
+        
+        <dependency>
+            <groupId>de.adesso.mobile.android.sec2.mwadapter</groupId>
+            <artifactId>sec2-middleware-ui</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <type>apklib</type>          
+        </dependency>
+        <dependency>
+            <groupId>org.sec2.mwserver-core</groupId>
+            <artifactId>sec2-mwserver-core</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>stax</groupId>
+                    <artifactId>stax-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>stax</groupId>
+                    <artifactId>stax</artifactId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>xpp3</artifactId>
+                    <groupId>xpp3</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.sec2.core</groupId>
+            <artifactId>sec2-core</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.sec2.securityprovider</groupId>
+            <artifactId>sec2-card</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+ 
+
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <!--<directory>bin</directory>-->
+        <plugins>
+            <plugin>
+                <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                <artifactId>android-maven-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+            
+                    <androidManifestFile>${project.basedir}/AndroidManifest.xml</androidManifestFile>
+                    <assetsDirectory>${project.basedir}/assets</assetsDirectory>
+                    <resourceDirectory>${project.basedir}/res</resourceDirectory>
+                    <nativeLibrariesDirectory>${project.basedir}/src/main/native</nativeLibrariesDirectory>
+                    <sdk>
+                        <platform>16</platform>
+                        <path>${env.ANDROID_HOME}</path>
+                        <path>${env.ANDROID_HOME}</path>
+                    </sdk>
+                    <deleteConflictingFiles>true</deleteConflictingFiles>
+                    <undeployBeforeDeploy>true</undeployBeforeDeploy>
+		    <failOnNonStandardStructure>false</failOnNonStandardStructure>
+
+                    <dex>  
+                        <jvmArguments>
+                            <argument>-Xms256m</argument>
+                            <argument>-Xmx2048m</argument>
+                        </jvmArguments>
+                    </dex>
+                </configuration>
+                <extensions>true</extensions>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <!--<version>2.3.2</version>-->
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                    <maxmem>2048m</maxmem>
+                </configuration>
+            </plugin>
+       
+        
+        
+        
+        </plugins>
+    </build>
+
+    
+
+</project>

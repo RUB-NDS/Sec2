@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="org.sec2.middleware"
+  android:versionCode="1"
+  android:versionName="1.0">
+  <uses-permission android:name="android.permission.INTERNET" />
+  <!-- access to the contact list -->
+  <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+  <uses-sdk
+      android:minSdkVersion="10"
+      android:targetSdkVersion="10" />
+  <!-- declare own permission to protect activities against access of third parties -->
+  <permission
+  	android:name="org.sec2.middleware.ACTIVITY_LOCK"
+    android:protectionLevel="signature"/>
+  <!-- declare own permission to protect service against access of third parties -->
+  <permission
+  	android:name="org.sec2.middleware.SERVICE_LOCK"
+    android:protectionLevel="signature"/>
+    
+  <uses-permission android:name="org.sec2.middleware.ACTIVITY_LOCK"/>
+  <uses-permission android:name="org.sec2.middleware.SERVICE_LOCK"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    
+  <supports-screens
+  	android:anyDensity="true"
+    android:largeScreens="true"
+    android:normalScreens="true"
+    android:resizeable="true"
+    android:smallScreens="true" />
+  
+  <application
+      android:icon="@drawable/icon"
+      android:label="@string/service_app_name"
+      android:debuggable="true"
+      android:name="org.sec2.android.app.Sec2MiddlewareApp">
+      <activity
+      	android:label="@string/service_app_name"
+        android:name="org.sec2.android.app.LoginActivity">
+        <intent-filter >
+        	<action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+      </activity>
+      <activity
+      	android:label="@string/service_app_name"
+        android:name="org.sec2.android.app.ServicePreferenceActivity"
+        android:permission="org.sec2.middleware.ACTIVITY_LOCK"/>
+      <activity
+      	android:label="@string/service_app_name"
+        android:name="org.sec2.android.app.UserManagementEntryActivity"
+        android:permission="org.sec2.middleware.ACTIVITY_LOCK"/>
+      <activity
+      	android:label="@string/service_app_name"
+        android:name="org.sec2.android.app.GroupManagementEntryActivity"
+        android:permission="org.sec2.middleware.ACTIVITY_LOCK"/>
+      <activity
+      	android:label="@string/service_app_name"
+        android:name="org.sec2.android.app.UserManagementActivity"
+        android:permission="org.sec2.middleware.ACTIVITY_LOCK"/>
+      <activity
+      	android:label="@string/service_app_name"
+        android:name="org.sec2.android.app.GroupManagementActivity"
+        android:permission="org.sec2.middleware.ACTIVITY_LOCK"/>
+      <activity
+      	android:label="@string/service_app_name"
+        android:name="org.sec2.android.app.GroupChooserActivity"
+        android:permission="org.sec2.middleware.ACTIVITY_LOCK"/>
+      <activity
+      	android:label="@string/service_app_name"
+        android:name="org.sec2.android.app.UsersToAddChooserActivity"
+        android:permission="org.sec2.middleware.ACTIVITY_LOCK"/>
+      <activity
+      	android:label="@string/service_app_name"
+        android:name="org.sec2.android.app.UsersToRemoveChooserActivity"
+        android:permission="org.sec2.middleware.ACTIVITY_LOCK"/>
+      <activity
+      	android:label="@string/service_app_name"
+        android:name="org.sec2.android.app.GroupCreateActivity"
+        android:permission="org.sec2.middleware.ACTIVITY_LOCK"/>
+      <activity
+      	android:label="@string/service_app_name"
+        android:name="org.sec2.android.app.AppsManagementActivity"
+        android:permission="org.sec2.middleware.ACTIVITY_LOCK"/>
+      <activity
+          android:name="org.sec2.android.app.PopupCarrierActivity"
+          android:permission="org.sec2.middleware.ACTIVITY_LOCK"
+          android:theme="@android:style/Theme.Translucent"
+          android:process=":Sec2MiddlewareService"/>
+      <service android:name="org.sec2.android.Sec2MiddlewareServiceImpl"
+          android:process=":Sec2MiddlewareService"
+          android:permission="org.sec2.middleware.SERVICE_LOCK">
+      	<intent-filter>
+        	<action android:name="org.sec2.android.Sec2MiddlewareServiceImpl" />
+      </intent-filter>
+    </service>
+  </application>
+</manifest> 

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, ServicesDemo!</string>
+    <string name="service_app_name">Sec2 Middleware</string>
+    <string name="menu_preferences">Einstellungen</string>
+    <string name="copydiag_title">Bereite ersten Start vor</string>
+    <string name="copydiag_message">Bitte warten...</string>    
+
+    <!-- Serverservice -->
+    <string name="server_title">Sec2-Middleware-Server</string>
+    <string name="server_stop">Der Sec2-Middleware-Server wurde gestoppt!</string>
+    <string name="server_stopping">Der Sec2-Middleware-Server wird gestoppt&#8230;</string>
+    <string name="server_start">Der Sec2-Middleware-Server wurde auf Port {0} gestartet.</string>
+    <string name="server_error_session_key_deletion">Beim Löschen des Sitzungsschlüssels ist ein Fehler aufgetreten!</string>
+    <string name="server_error_add_no_group">Es ist ein Fehler aufgetreten. Benutzer konnte nicht zur \"{0}\" Gruppe hinzugefügt werden.</string>
+    <string name="server_error_remove_no_group">Es ist ein Fehler aufgetreten. Benutzer konnte nicht aus der \"{0}\" Gruppe entfernt werden.</string>
+    <string name="server_error_remove_owner">Es ist ein Fehler aufgetreten. Benutzer konnte nicht aus der \"{0}\" Gruppe entfernt werden, da er der Besitzer der Gruppe ist.</string>
+    <string name="server_error_add_no_user">Es ist ein Fehler aufgetreten. \"{0}\" Benutzer konnte nicht zur Gruppe hinzugefügt werden.</string>
+    <string name="server_error_remove_no_user">Es ist ein Fehler aufgetreten. \"{0}\" Benutzer konnte nicht aus der Gruppe entfernt werden.</string>
+    <string name="server_error_add">Es ist ein Fehler aufgetreten. \"{0}\" Benutzer konnte nicht zur Gruppe \"{1}\" hinzugefügt werden.</string>
+    <string name="server_error_remove">Es ist ein Fehler aufgetreten. \"{0}\" Benutzer konnte nicht aus der Gruppe \"{1}\" entfernt werden.</string>
+    <string name="server_error_add_no_access">Es ist ein Fehler aufgetreten. Benutzer konnte nicht zur Gruppe hinzugefügt werden. Sie sind nicht der Besitzer der Gruppe \"{0}\".</string>
+    <string name="server_error_remove_no_access">Es ist ein Fehler aufgetreten. Benutzer konnte nicht aus der Gruppe entfernt werden. Sie sind nicht der Besitzer der Gruppe \"{0}\".</string>
+    
+    <!-- ServicePreferenceActivity -->
+    <string name="service_conf_port_group_header">Sec2-Middleware-Serverkonfiguration</string>
+    <string name="service_conf_port_dialog_title">Port der Middleware:</string>
+    <string name="service_conf_port_title">Port</string>
+    <string name="service_conf_port_summary">Der Port, auf dem der Middleware-Server lauschen wird</string>
+    <string name="service_conf_pw_group_header">Sec2-Middleware-Loginkonfiguration</string>
+    <string name="service_conf_pw_dialog_title">Neues Login-Paßwort:</string>
+    <string name="service_conf_pw_title">Paßwort</string>
+    <string name="service_conf_pw_summary">Geben Sie hier das neue Paßwort ein, mit dem Sie sich bei dieser App anmelden möchten.</string>
+    <string name="service_conf_pw_hint">Neues Paßwort</string>
+    <string name="service_conf_pw_empty_error">Paßwort darf nicht leer sein!</string>
+    <string name="service_conf_pw_store_error">Neues Paßwort konnte nicht gespeichert werden! Paßwort wird auf das alte Paßwort zurückgesetzt.</string>
+    <string name="start_btn_start">Start Server</string>
+    <string name="stop_btn_stop">Stop Server</string>
+    <string name="next_btn_next">Weiter zur Benutzerverwaltung</string>
+    <string name="service_conf_popup_title">Sec2-Service</string>
+    <string name="service_conf_popup_bind_error">FEHLER: Es konnte sich nicht mit dem Service verbunden werden!</string>
+    <string name="service_conf_popup_service_com_error">FEHLER: Es trat ein Fehler während der Kommunikation mit dem Service auf!</string>
+    <string name="service_conf_status">Status des Sec2-Middleware-Servers:</string>
+    <string name="service_conf_status_started">GESTARTET</string>
+    <string name="service_conf_status_stopped">GESTOPPT</string>
+    <string name="service_conf_status_unknown">UNBEKANNT</string>
+    <string name="service_conf_popup_server_start_error">FEHLER: Der Sec2-Middleware-Server konnte nicht gestartet werden!</string>
+    <string name="service_conf_popup_server_stop_error">FEHLER: Der Sec2-Middleware-Server konnte nicht gestoppt werden!</string>
+    <string name="service_conf_popup_user_management_error">FEHLER: Die Benutzerverwaltung konnte nicht geladen werden!</string>
+    <string name="service_conf_popup_user_management_error_server">Stellen Sie sicher, daß der Sec2-Middleware-Server korrekt gestartet wurde.</string>
+    <string name="service_conf_popup_user_management_error_sk">Es konnte kein Sitzungsschlüssel geholt werden.</string>
+    <string name="service_conf_popup_group_management_error_sk">Es konnte kein Sitzungsschlüssel geholt werden.</string>
+    <string name="service_conf_popup_group_management_error">FEHLER: Die Gruppenverwaltung konnte nicht geladen werden!</string>
+    <string name="service_conf_popup_group_management_error_server">Stellen Sie sicher, daß der Sec2-Middleware-Server korrekt gestartet wurde.</string>
+    <string name="service_conf_more_group_header">Weitere Einstellungen</string>
+    <string name="service_conf_more_user_management_title">Benutzerverwaltung</string>
+    <string name="service_conf_more_user_management_summary">Weiter zur Benutzerverwaltung.</string>
+    <string name="service_conf_more_group_management_title">Gruppenverwaltung</string>
+    <string name="service_conf_more_group_management_summary">Weiter zur Gruppenverwaltung.</string>
+    <string name="service_conf_more_app_management_title">App-verwaltung</string>
+    <string name="service_conf_more_app_management_summary">Weiter zur App-Verwaltung.</string>
+    
+    <!-- PopupCarrierActivity -->
+    <string name="popup_carrier_popup_title">App-Registrierung</string>
+    <string name="popup_carrier_popup_text">Möchten Sie zulassen, daß sich die App "{0}" bei der Sec2-Middleware registriert?</string>
+    
+    <!-- LoginActivity -->
+    <string name="login_welcome">Willkommen bei der Administrations-App zur Sec2-Middleware. Bitte geben Sie ihr Paßwort ein und loggen Sie sich ein.</string>
+    <string name="login_hint">Paßwort</string>
+    <string name="login_login">Einloggen!</string>
+    <string name="login_pw_validation_error_title">Paßwortvalidierung</string>
+    <string name="login_pw_validation_error">Während der Paßwortvalidierung ist ein Fehler aufgetreten: {0}</string>
+    <string name="login_pw_wrong_error">Das eingegebene Paßwort ist nicht korrekt</string>
+    
+    <!-- UserManagementEntryActivity -->
+    <string name="usermanagement_popup_groups_error">FEHLER: Gruppen konnten nicht abgerufen werden!</string>
+    <string name="usermanagement_popup_userid_error">FEHLER: Benutzer konnte nicht gefunden werden!</string>
+    <string name="usermanagement_popup_title">Gruppenauswahl</string>
+    <string name="usermanagement_userid_error">Es konnte keine Benutzer-ID für Position {0} gefunden werden</string>
+    
+    <!-- GroupChooserActivity -->
+    <string name="group_chooser_intro">Wählen Sie die Gruppen, zu der der Benutzer \"{0}\" hinzugefügt werden soll. Gruppen, in denen der Benutzer bereits Mitglied ist, oder wo Sie nicht der Besitzer sind, werden nicht angezeigt.</string>
+    <string name="group_chooser_intro_no_user">FEHLER: Es wurde kein Benutzer gefunden.</string>
+    <string name="group_chooser_request_error_pref">FEHLER: Gruppen konnten nicht abgerufen werden! {0}</string>
+    <string name="group_chooser_save_error_pref">FEHLER: Benutzer konnte nicht zu den ausgewählten Gruppen hinzugefügt werden! {0}</string>
+    <string name="group_chooser_key_error_msg">Kein Sitzungsschlüssel gefunden!</string>
+    <string name="group_chooser_algorithm_error_msg">Kein Algorithmus für den Sitzungsschlüssel gefunden!</string>
+    <string name="group_chooser_token_error_msg">Kein Sitzungstoken gefunden!</string>
+    <string name="group_chooser_popup_title">Gruppenauswahl</string>
+    <string name="group_chooser_success">Benutzer wurde erfolgreich den ausgewählten Gruppen hinzugefügt.</string>
+    <string name="group_chooser_fail">Es gab Fehler während des Speichervorgangs. Evtl. wurde der Benutzer nicht allen ausgewählten Gruppen hinzugefügt.</string>
+    
+    <!-- UserManagementActivity -->
+    <string name="um_popup_add_error_title">Gruppenauswahl</string>
+    <string name="um_popup_remove_error_title">Aus Gruppe entfernen</string>
+    <string name="um_popup_remove_success_title">Aus Gruppe entfernen</string>
+    <string name="um_popup_error_title">Benutzerverwaltung</string>
+    <string name="um_popup_confirm_title">Bestätigung</string>
+    <string name="um_popup_confirm_remove">Soll der Benutzer \"{0}\" wirklich aus der Gruppe \"{1}\" entfernt werden?</string>
+    <string name="um_popup_confirm_remove_all">Soll der Benutzer \"{0}\" wirklich aus allen Gruppen entfernt werden?</string>
+    <string name="um_popup_user_error">FEHLER: Der Benutzer konnte nicht gefunden werden!</string>
+    <string name="um_popup_group_error">FEHLER: Die Gruppe konnte nicht gefunden werden!</string>
+    <string name="um_popup_remove_success">Der Benutzer \"{0}\" wurde erfolgreich aus der Gruppe \"{1}\" entfernt.</string>
+    <string name="um_popup_remove_all_success">Der Benutzer \"{0}\" wurde erfolgreich aus allen Gruppen entfernt.</string>
+    <string name="um_popup_remove_error_general">FEHLER: Beim Entfernen ist ein Fehler aufgetreten. {0}</string>
+    <string name="um_popup_userid_error">FEHLER: Benutzer konnte nicht gefunden werden!</string>
+    <string name="um_context_remove">Aus Gruppe entfernen</string>
+    <string name="um_context_remove_all">Aus allen Gruppen entfernen</string>
+    <string name="um_popup_remove_fail">Während der Verarbeitung sind Fehler aufgetreten. Der Benutzer \"{0}\" wurde evtl. nicht erfolgreich aus der Gruppe \"{1}\" entfernt.</string>
+    <string name="um_popup_remove_all_fail">Während der Verarbeitung sind Fehler aufgetreten. Der Benutzer \"{0}\" wurde evtl. nicht erfolgreich aus allen Gruppe entfernt.</string>
+    
+    <!-- GroupManagementActivity -->
+    <string name="group_popup_remove_title">Aus Gruppe entfernen</string>
+    <string name="group_popup_add_title">Zur Gruppe hinzufügen</string>
+    <string name="group_popup_error_title">FEHLER</string>
+    <string name="group_popup_group_error">FEHLER: Die Grouppe konnte nicht gefunden werden!</string>
+    <string name="group_popup_user_error">FEHLER: Der Benutzer konnte nicht gefunden werden!</string>
+    <string name="group_popup_owner_error">FEHLER: Der Benutzer konnte nicht aus der Gruppe entfernt werden, da er der Besitzer der Gruppe ist!</string>
+    <string name="group_popup_general_error">FEHLER: Beim Entfernen des Benutzers aus der Gruppe ist ein Fehler aufgetreten. {0}</string>
+    <string name="group_popup_general_error_info">Der Benutzer \"{0}\" wurde evtl. nicht aus der Gruppe \"{1}\" entfernt.</string>
+    <string name="group_popup_confirm_title">Bestätigung</string>
+    <string name="group_popup_confirm_remove">Soll der Benutzer \"{0}\" wirklich aus der Gruppe \"{1}\" entfernt werden?</string>
+    <string name="group_popup_success">Der Benutzer \"{0}\" wurde erfolgreich aus der Gruppe \"{1}\" entfernt.</string>
+    
+    <!-- UsersToAddChooserActivity -->
+    <string name="uta_chooser_intro">Wählen Sie die Benutzer, die der Gruppe \"{0}\" hinzugefügt werden sollen. Benutzer, die bereits Mitglied sind, werden nicht angezeigt.</string>
+    <string name="uta_chooser_intro_no_group">FEHLER: Es wurde keine Gruppe gefunden.</string>
+    <string name="uta_chooser_request_error_pref">FEHLER: Benutzer konnten nicht abgerufen werden! {0}</string>
+    <string name="uta_chooser_save_error_pref">FEHLER: Ausgewählte Benutzer konnten nicht zu der Gruppe hinzugefügt werden! {0}</string>
+    <string name="uta_chooser_key_error_msg">Kein Sitzungsschlüssel gefunden!</string>
+    <string name="uta_chooser_algorithm_error_msg">Kein Algorithmus für den Sitzungsschlüssel gefunden!</string>
+    <string name="uta_chooser_token_error_msg">Kein Sitzungstoken gefunden!</string>
+    <string name="uta_chooser_success">Benutzer wurden erfolgreich der Gruppe hinzugefügt.</string>
+    <string name="uta_chooser_fail">Während der Verarbeitung sind Fehler aufgetreten. Evtl. wurden nicht alle Benutzer erfolgreich der Gruppe hinzugefügt.</string>
+    <string name="uta_chooser_popup_title">Benutzerauswahl</string>
+    <string name="uta_chooser_username_not_found">Benutzer nicht gefunden.</string>
+    
+    
+    <!-- UsersToRemoveChooserActivity -->
+    <string name="utr_chooser_intro">Wählen Sie die Benutzer, die aus der Gruppe \"{0}\" entfernt werden sollen. Der Gruppenbesitzer wird nicht angezeigt, da er nicht aus der Gruppe entfernt werden kann.</string>
+    <string name="utr_chooser_intro_no_group">FEHLER: Es wurde keine Gruppe gefunden.</string>
+    <string name="utr_chooser_popup_title">Benutzerauswahl</string>
+    <string name="utr_chooser_remove_error_pref">FEHLER: Ausgewählte Benutzer konnten nicht aus der Gruppe entfernt werden! {0}</string>
+    <string name="utr_chooser_success">Benutzer wurden erfolgreich aus der Gruppe entfernt.</string>
+    <string name="utr_chooser_fail">Während der Verarbeitung sind Fehler aufgetreten. Evtl. wurden nicht alle Benutzer erfolgreich aus der Gruppe entfernt.</string>
+    
+    <!-- GroupManagementEntryActivity -->
+    <string name="gm_title">Gruppen</string>
+    <string name="gm_intro">Hier werden alle Gruppen angezeigt, die Sie eröffnet haben, d.h., von denen Sie der Besitzer sind.</string>
+    <string name="gm_titlebar">Gruppenverwaltung</string>
+    <string name="gm_popup_title">Gruppenverwaltung</string>
+    <string name="gm_popup_confirm_title">Bestätigung</string>
+    <string name="gm_popup_request_error_pref">FEHLER: Gruppe(n) konnten nicht abgerufen werden! {0}</string>
+    <string name="gm_popup_key_error_msg">Kein Sitzungsschlüssel gefunden!</string>
+    <string name="gm_popup_algorithm_error_msg">Kein Algorithmus für den Sitzungsschlüssel gefunden!</string>
+    <string name="gm_popup_token_error_msg">Kein Sitzungstoken gefunden!</string>
+    <string name="gm_popup_group_error_msg">Ausgewählte Gruppe konnte nicht gefunden werden!</string>
+    <string name="gm_popup_confirm_remove">Möchten Sie die Gruppe \"{0}\" wirklich löschen?</string>
+    <string name="gm_popup_remove_success">Die Gruppe wurde erfolgreich gelöscht</string>
+    <string name="gm_popup_remove_fail">FEHLER: Die Gruppe konnte nicht gelöscht werden!</string>
+    <string name="gm_context_add_user">Benutzer zur Gruppe hinzufügen</string>
+    <string name="gm_context_delete_group">Gruppe löschen</string>
+    
+    <!-- GroupCreateActivity -->
+    <string name="group_create_title">Neue Gruppe erstellen</string>
+    <string name="group_create_name_text">Gruppenname:</string>
+    <string name="group_create_name_hint">Name der neuen Gruppe</string>
+    <string name="group_create_popup_title">Neue Gruppe erstellen</string>
+    <string name="group_create_popup_error_pref">FEHLER: Es ist ein Fehler aufgetreten! Die Gruppe wurde evtl. nicht korrekt neu angelegt. {0}</string>
+    <string name="group_create_popup_error_id_msg">Gruppen-ID konnte nicht generiert werden.</string>
+    <string name="group_create_popup_success">Die neue Gruppe wurde erfolgreich angelegt.</string>
+    
+    <!-- AppManagementActivity -->
+    <string name="app_management_intro">Hier werden die IDs aller Apps angezeigt, die sich bei der Sec2-Middleware registriert haben. Über einen Long-Click können Sie die Registrierung für die entsprechende App rückgängig machen.</string>
+    <string name="app_management_titlebar">App-Verwaltung</string>
+    <string name="app_management_popup_title">App-Verwaltung</string>
+    <string name="app_management_popup_request_error_pref">FEHLER: App-IDs konnten nicht abgerufen werden! {0}</string>
+    <string name="app_management_popup_confirm_title">Bestätigung</string>
+    <string name="app_management_popup_confirm">Möchten Sie die Registrierung der App mit der ID \"{0}\" wirklich aufheben?</string>
+    <string name="app_management_popup_success">Die Registrierung für die App mit der ID \"{0}\" wurde erfolgreich aufgehoben.</string>
+    <string name="app_management_popup_fail">FEHLER: Die Registrierung für die App mit der ID \"{0}\" konnte nicht aufgehoben werden.</string>
+    
+    <!-- Verschiedenes -->
+    <string name="ok">OK</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nein</string>
+    <string name="save">Speichern</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="add_btn_description">Ein Button, der ein + zeigt</string>
+    <string name="remove_btn_description">Ein Button, der ein - zeigt</string>
+    <string name="na">n/a</string>
+    <string name="null_literal">[NULL]</string>
+</resources>

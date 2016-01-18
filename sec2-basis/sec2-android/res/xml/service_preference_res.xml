@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="@string/service_conf_port_group_header">
+		<de.adesso.mobile.android.sec2.mwadapter.gui.components.ValidatedEditTextPreference
+		    android:title="@string/service_conf_port_title"
+			android:summary="@string/service_conf_port_summary"
+			android:dialogTitle="@string/service_conf_port_dialog_title"
+			android:key="server_port"
+			android:defaultValue="50001"
+			android:numeric="integer"
+			android:maxLength="5">
+		</de.adesso.mobile.android.sec2.mwadapter.gui.components.ValidatedEditTextPreference>
+	</PreferenceCategory>
+	<PreferenceCategory android:title="@string/service_conf_pw_group_header">
+		<org.sec2.android.app.component.LoginPasswordEditTextPreference
+		    android:title="@string/service_conf_pw_title"
+			android:summary="@string/service_conf_pw_summary"
+			android:dialogTitle="@string/service_conf_pw_dialog_title"
+			android:key="login_password"
+			android:hint="@string/service_conf_pw_hint"
+			android:maxLength="255">
+		</org.sec2.android.app.component.LoginPasswordEditTextPreference>
+	</PreferenceCategory>
+	<PreferenceCategory android:title="@string/service_conf_more_group_header">
+		<Preference
+		    android:key="link_user_management"
+		    android:title="@string/service_conf_more_user_management_title"
+    		android:summary="@string/service_conf_more_user_management_summary">
+		</Preference>
+		<Preference
+		    android:key="link_group_management"
+		    android:title="@string/service_conf_more_group_management_title"
+    		android:summary="@string/service_conf_more_user_management_summary">
+		</Preference>
+		<Preference
+		    android:key="link_app_management"
+		    android:title="@string/service_conf_more_app_management_title"
+    		android:summary="@string/service_conf_more_app_management_summary">
+		</Preference>
+	</PreferenceCategory>
+</PreferenceScreen>

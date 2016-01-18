@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:stretchColumns="1">
+
+     <TableRow>
+        <TextView
+            android:layout_column="1"
+            android:text="@string/gm_title"
+            android:padding="3dip"
+            android:layout_gravity="center_vertical"/>
+        <include layout="@layout/add_btn" />   
+    </TableRow>
+    <View
+        android:layout_height="1dip"
+        android:background="#FF909090" />
+    <TextView
+        android:text="@string/gm_intro"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dip"/>
+    <View
+        android:layout_height="1dip"
+        android:background="#FF909090" />
+    <ListView
+        android:id="@+id/groups_overview_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+    
+</TableLayout>
