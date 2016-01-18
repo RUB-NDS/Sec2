@@ -108,9 +108,9 @@
             <!--  <directory>bin</directory>-->
     <plugins>
       <plugin>
-        <groupId>com.simpligility.maven.plugins</groupId>
+        <groupId>com.jayway.maven.plugins.android.generation2</groupId>
        <artifactId>android-maven-plugin</artifactId>
-       <version>4.1.1</version>
+       <version>3.8.0</version>
         <configuration>
 
           <androidManifestFile>${project.basedir}/AndroidManifest.xml</androidManifestFile>
@@ -120,7 +120,7 @@
           <failOnNonStandardStructure>false</failOnNonStandardStructure>
 
           <sdk>
-            <platform>10</platform>
+            <platform>16</platform>
 	     <path>${env.ANDROID_HOME}</path>
 	    <path>${env.ANDROID_HOME}</path>
           </sdk>
